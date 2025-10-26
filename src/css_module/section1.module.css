@@ -1,0 +1,33 @@
+.n_head {
+    min-height: 48px;
+}
+
+
+
+/* xs */
+/* @media (max-width: 575.98px) {
+   
+
+} */
+
+/* sm */
+/* @media (min-width: 576px) and (max-width: 767.98px) {} */
+@media (max-width: 767.98px) {
+    .titleHead{
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        display: block;
+    }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* xxl */
+@media (min-width: 1400px) {}

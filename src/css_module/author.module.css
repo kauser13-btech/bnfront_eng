@@ -1,0 +1,112 @@
+.authorBox {
+    padding: 20px;
+    display: table;
+    background-color: #fafafa;
+    border-bottom: 4px solid #446eac;
+    font-family: "Oswald", serif;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.authorBox h2.widgetTitle {
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    color: #446eac;
+    display: block;
+    margin: 0;
+}
+.authorBox .authorInfo_widget {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    text-align: center;
+}
+.authorBox .authorInfo_widget .profilePhoto {
+    text-align: center;
+}
+.authorBox .authorInfo_widget .profilePhoto img {
+    width: 130px;
+    min-height: 130px;
+    object-fit: cover;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    background: #fff;
+    padding: 5px;
+    border: 2px inset #e8e8e8;
+}
+.authorBox .authorInfo_widget .profileDataBlock h3 {
+    color: #446eac;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+.authorBox .authorInfo_widget .profileDataBlock img {
+    width: 100px;
+}
+.authorBox .authorDetail_widget {
+    float: left;
+    width: 80%;
+}
+.authorBox .authorDetail_widget .widgetContent {
+    margin: 10px;
+    background-color: #ffffff;
+    webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.222);
+    -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.222);
+    -o-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.222);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.222);
+}
+
+
+
+.top_position{
+    top: 130px;
+}
+.box {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    background: #ededed;
+}
+.content {
+    margin: 15px 2px;
+}
+.image img {
+    height: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.name {
+    font-size: 1.25em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.job_title {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: gray;
+}
+.job_discription {
+    font-size: 1rem;
+    color: gray;
+    margin: 10px 30px 20px;
+}
+
+.title{
+    font-size: var(--title-font-size);
+}
+.nimg{
+    aspect-ratio: 16/11;
+    object-fit: cover;
+}
+.author .bm_last:last-child{
+    border-bottom: unset !important;
+}

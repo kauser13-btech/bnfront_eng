@@ -1,0 +1,7 @@
+# Crawl banglanews24.com,
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+
+Sitemap: https://www.banglanews24.com/sitemap.xml

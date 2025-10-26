@@ -1,0 +1,14 @@
+.titleBgImg{
+    /* background: url('/img/sports-bg.png') center top no-repeat #809351; */
+}
+.leadnewsTitle {
+    content: "";
+    background: linear-gradient(180deg, transparent 10.87%, rgba(0, 0, 0, .6) 40%, #000);
+    width: 100%;
+    /* height: 28%; */
+    bottom: 0;
+}
+.minImg{
+    height: 73px !important;
+    object-fit: cover;
+}

@@ -1,0 +1,49 @@
+.bg {
+    background-color: #f0f3f5;
+}
+
+.title span span::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: #ccc;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.title span p {
+    background-color: #f0f3f5;
+    padding: 0 15px;
+    position: sticky;
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+}
+
+.title span i {
+    color: red;
+    font-size: 18px;
+    -webkit-animation: blink 3.0s linear infinite;
+    -moz-animation: blink 3.0s linear infinite;
+    -ms-animation: blink 3.0s linear infinite;
+    -o-animation: blink 3.0s linear infinite;
+    animation: blink 3.0s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        text-shadow: 0 0 15px red;
+    }
+
+    50% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 15px red;
+    }
+}
