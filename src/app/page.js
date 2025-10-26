@@ -132,7 +132,7 @@ export default async function Home() {
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-5" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-6" catId="home" w="320" h="250" />
 
-            <Section8 title="জাতীয়" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
+            <Section8 title="National" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-6" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-7" catId="home" w="320" h="250" />
