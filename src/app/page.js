@@ -125,41 +125,29 @@ export default async function Home() {
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-5" catId="home" w="320" h="250" />
 
-            <Section1 title="স্পেশাল রিপোর্ট" data={data.highlight} />
+            <Section1 title="Highlights" data={data.highlight} />
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-5" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-6" catId="home" w="320" h="250" />
 
-            <Section8 title="জাতীয়" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
+            <Section8 title="National" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-6" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-7" catId="home" w="320" h="250" />
 
-            <Section9 title="রাজনীতি" data={data.homeCat_2} hrf="/category/politics" latest={data.latest} mostRead={data.most_read} />
+            <Section9 title="International" data={data.homeCat_4} hrf="/category/international" latest={data.latest} mostRead={data.most_read} />
 
-            <LazySection fallback={<CardSkeleton />}>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-12 col-xl-6'>
-                            <Section5 title="অর্থনীতি-ব্যবসা" data={data.homeCat_3} hrf="/category/economics-business" />
-                        </div>
-                        <div className='col-12 col-xl-6'>
-                            <Section5 title="আন্তর্জাতিক" data={data.homeCat_4} hrf="/category/international" />
-                        </div>
-                    </div>
-                </div>
-            </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
                 <DesktopAd adData={data.banner_desktop} position="desktop-home-section-7" catId="home" w="970" h="90" />
                 <MobileAd adData={data.banner_mobile} position="mobile-home-section-8" catId="home" w="320" h="250" />
 
-                <Section2 title="খেলা" data={data.homeCat_5} hrf="/category/sports" />
+                <Section2 title="Sports" data={data.homeCat_5} hrf="/category/sports" />
 
                 <DesktopAd adData={data.banner_desktop} position="desktop-home-section-8" catId="home" w="970" h="90" />
                 <MobileAd adData={data.banner_mobile} position="mobile-home-section-9" catId="home" w="320" h="250" />
 
-                <Section6 title="বিনোদন" data={data.homeCat_6} hrf="/category/entertainment" adPosition="desktop-home-section-9" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
+                <Section6 title="Entertainment" data={data.homeCat_6} hrf="/category/entertainment" adPosition="desktop-home-section-9" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
@@ -172,32 +160,24 @@ export default async function Home() {
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
-                <Section1 title="সারাদেশ" data={data.homeCat_1253} hrf="/category/saradesh" />
+                <Section1 title="Health" data={data.homeCat_9} hrf="/category/health" />
 
                 <MobileAd adData={data.banner_mobile} position="mobile-home-section-12" catId="home" w="320" h="250" />
 
-                <Section1 title="চট্টগ্রাম প্রতিদিন" data={data.homeCat_14} hrf="/category/daily-chittagong" />
-            </LazySection>
-
-            <LazySection fallback={<CardSkeleton />}>
-                <Section2 title="লাইফস্টাইল" data={data.homeCat_12} hrf="/category/lifestyle" />
-            </LazySection>
-
-            <LazySection fallback={<CardSkeleton />}>
-                <Photogallery />
+                <Section1 title="Politics" data={data.homeCat_2} hrf="/category/politics" />
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
                 <div className="container mt-4">
                     <div className='row'>
                         <div className='col-12 col-xl-4 borde-endr-xl border-end-xxl'>
-                            <Section4 title="শিক্ষা" data={data.homeCat_20} hrf="/category/education" />
+                            <Section4 title="Business" data={data.homeCat_3} hrf="/category/business" />
                         </div>
                         <div className='col-12 col-xl-4 borde-endr-xl border-end-xxl'>
-                            <Section4 title="স্বাস্থ্য" data={data.homeCat_19} hrf="/category/health" />
+                            <Section4 title="Technology" data={data.homeCat_7} hrf="/category/technology" />
                         </div>
                         <div className='col-12 col-xl-4'>
-                            <Section4 title="তথ্যপ্রযুক্তি" data={data.homeCat_7} hrf="/category/information-technology" />
+                            <Section4 title="Lifestyle" data={data.homeCat_10} hrf="/category/lifestyle" />
                         </div>
                     </div>
                 </div>
@@ -207,20 +187,19 @@ export default async function Home() {
                 <div className="container mt-4">
                     <div className='row'>
                         <div className='col-12 col-xl-4 borde-endr-xl border-end-xxl'>
-                            <Section4 title="ফিচার" data={data.homeCat_9} hrf="/category/feature" />
+                            <Section4 title="Education" data={data.homeCat_8} hrf="/category/education" />
                         </div>
                         <div className='col-12 col-xl-4 borde-endr-xl border-end-xxl'>
-                            <Section4 title="ইসলাম" data={data.homeCat_15} hrf="/category/islam" />
+                            <Section4 title="Special" data={data.homeCat_12} hrf="/category/banglanews-special" />
                         </div>
                         <div className='col-12 col-xl-4'>
-                            <Section4 title="শিল্প-সাহিত্য" data={data.homeCat_11} hrf="/category/art-literature" />
+                            <Section4 title="Open forum" data={data.homeCat_15} hrf="/category/open-forum" />
                         </div>
                     </div>
                 </div>
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
-                <Section1 title="মুক্তমত" data={data.homeCat_16} hrf="/category/opinion" />
                 <Section7 />
             </LazySection>
 
