@@ -11,9 +11,9 @@ export async function GET() {
     data.map((row, i) => {
         items += `<item>  
             <title>${row.n_head}</title>  
-            <link>https://www.news24bd.tv/details/${row.n_id}</link>
+            <link>${process.env.NEXT_PUBLIC_BASE_URL}/${row.cat_name.slug}/news/bd/${row.n_id}.details</link>
             <pubDate>${row.start_at} GMT</pubDate>
-            <guid isPermaLink="false">https://www.news24bd.tv/details/${row.n_id}</guid>
+            <guid isPermaLink="false">${process.env.NEXT_PUBLIC_BASE_URL}/${row.cat_name.slug}/news/bd/${row.n_id}.details</guid>
         </item>`
     });
 

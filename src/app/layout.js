@@ -23,9 +23,9 @@ const notoSarifBengali = Noto_Serif_Bengali({
 });
 
 export const metadata = {
-    metadataBase: new URL('https://en.banglanews24.com'),
+    metadataBase: new URL('https://www.banglanews24.com'),
     applicationName: 'Banglanews24',
-    authors: [{ name: 'Banglanews24', url: 'https://en.banglanews24.com' }],
+    authors: [{ name: 'Banglanews24', url: 'https://www.banglanews24.com' }],
     manifest: '/feedifyPWAmanifest.json',
     robots: {
         index: true,
@@ -46,7 +46,7 @@ export const metadata = {
         ],
     },
     other: {
-        'identifier-URL': 'https://en.banglanews24.com',
+        'identifier-URL': 'https://www.banglanews24.com',
         'fb:pages': '',
     },
     twitter: {
@@ -64,16 +64,16 @@ export default function RootLayout({ children }) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://en.banglanews24.com/"
+                "item": "https://www.banglanews24.com/"
             }
         ],
 
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Banglanews24.com",
-        "image": "https://en.banglanews24.com/public/desktop/img/bn24_logo_3.jpg",
-        "@id": "https://en.banglanews24.com/public/desktop/img/bn24_logo_3.jpg",
-        "url": "https://en.banglanews24.com/",
+        "image": "https://www.banglanews24.com/public/desktop/img/bn24_logo_3.jpg",
+        "@id": "https://www.banglanews24.com/public/desktop/img/bn24_logo_3.jpg",
+        "url": "https://www.banglanews24.com/",
         "telephone": "+8809612123131",
         "address": {
             "@type": "PostalAddress",

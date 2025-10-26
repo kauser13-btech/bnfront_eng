@@ -18,7 +18,7 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
                         <div className="col-12 col-lg-4 order-2 order-xl-1">
                             {leadMore.slice(6, 11).map((row, i) =>
                                 <div key={i} className="row position-relative mb-2">
-                                    <div className="col-4 ps-0 position-relative">
+                                    <div className="col-4 pe-0 position-relative">
                                         <h3><ViewImg image={row.main_image} cls="h-100 w-100" alt={row.n_head} /></h3>
 
                                         {row.main_video != 0 &&

@@ -164,7 +164,7 @@ const DetailsPage = async ({ params }) => {
                     </div>
 
                     <div className="sticky-top">
-                        <NewsList data={data.latest} title="সর্বশেষ সংবাদ" />
+                        <NewsList data={data.most_read} title="সর্বাধিক পঠিত" />
 
                         <div className="my-4">
                             <DesktopAd adData={data.banner_desktop} position="desktop-details-section-4" catId={mID} w="300" h="250" nid={data.details.n_id} />

@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-xl-4">
-                            <div className="social-links">
+                            <div className="social-links mob_left_none">
                                 <span className="me-1 float-start">অনুসরণ করুণ |</span>
                                 <a className="me-2 float-start" href="https://www.youtube.com/channel/UCzfkD4dNxVlIhUW3xaM4uxw"><i className="bi bi-youtube"></i></a>
                                 <a className="me-2 float-start" href="https://x.com/banglanews24com"><i className="bi bi-twitter"></i></a>
@@ -36,9 +36,11 @@ const Footer = () => {
 
             <div className="border-bottom pb-2 mb-2">
                 <div className="container">
-                    <div className="row">
+                    <div className="row mob_left_none">
                         <div className="col-12 col-lg-7">
                             <strong>সম্পাদক: তৌহিদুল ইসলাম মিন্টু</strong>
+                            <br />
+                            প্রকাশক : ময়নাল হোসেন চৌধুরী
                         </div>
                         <div className="col-12 col-lg-5">
                             <nav className="d-flex flex-wrap justify-content-between">
@@ -53,7 +55,7 @@ const Footer = () => {
             </div>
 
             <div className="container text-center">
-                কপিরাইট © ২০২৫ বাংলানিউজটোয়েন্টিফোর.কম
+                কপিরাইট © ২০২৫ বাংলানিউজটোয়েন্টিফোর.কম | ইস্ট ওয়েস্ট মিডিয়া পিএলসি (ইডব্লিউএমজিপিএলসি) বসুন্ধরা  গ্রুপের একটি প্রতিষ্ঠান
             </div>
         </footer>
     );

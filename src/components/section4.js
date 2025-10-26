@@ -8,7 +8,7 @@ const Section4 = ({ title, data, hrf = '' }) => {
     const [leadNews, ...leadNewsMore] = data;
 
     return (
-        <section>
+        <section className="section4">
             <h3 className="mb-3 pb-2 border-bottom">
                 {title}
                 {hrf != '' &&
@@ -25,7 +25,7 @@ const Section4 = ({ title, data, hrf = '' }) => {
 
             {leadNewsMore.slice(0, 3).map((row, i) =>
                 <div className={`${i < 2 && 'border-bottom'}`} key={i}>
-                    <h5 className="text-limit-2 mt-2">{row.n_head}</h5>
+                    <CustomLink className="text-limit-2 mt-2 fs-5" href={`${row.cat_name.slug}/news/bd/${row.n_id}.details`}>{row.n_head}</CustomLink>
                 </div>
             )}
 

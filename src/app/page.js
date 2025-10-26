@@ -59,16 +59,16 @@ export const metadata = {
     description: 'BanglaNews24 is the most popular online Bangla news portal in Bangladesh covering all latest BD News and international news Top and instant 24 7 Live News provider in BD.',
     keywords: ['Banglanews24, Bangla News, Bangla News Paper, Online Bangla News Portal, Bangaldesh News, Bangla News Online, Online Bangla News, Bangladeshi News, Bangladeshi News Online, Bengali News, Bengali Online News, Dhaka Bangladesh News, banglanews24,bangla news 24, bangla news, bd news, banglanews24.com, bangla news24, bangladesh news 24, banglanewsBreaking News, World News, BD News, Breaking News, National News, Country News, Entertainment News, Politics, Law and court, International, Sports, Entertainment, technology, Art and culture, Lifestyle, district news, daily chittagong, economics business, health, education, Islam, India, career, horoscope, interviews, football news, Kids news, feature news, tourism, opinion, probash, power, fuel, election comission,corporate corner, জাতীয়, রাজনীতি, আইন ও আদালত, আন্তর্জাতিক, খেলা, বিনোদন,তথ্যপ্রযুক্তি, শিল্প-সাহিত্য, লাইফস্টাইল, জেলার খবর, চট্টগ্রাম প্রতিদিন, অর্থনীতি-ব্যবসা, স্বাস্থ্য, শিক্ষা, ইসলাম, ভারত, ক্যারিয়ার, রাশিফল, সাক্ষাৎকার, কাতার বিশ্বকাপ, ইচ্ছেঘুড়ি, ফিচার, পর্যটন, মুক্তমত, প্রবাসে বাংলাদেশ, বিদ্যুৎ ও জ্বালানি, অফবিট, নির্বাচন ও ইসি, এভিয়াট্যুর, অপার মহিমার রমজান, অপার মহিমার রমজান, কর্পোরেট কর্নার, আজকের সব সংবাদ'],
     alternates: {
-        canonical: 'https://en.banglanews24.com',
+        canonical: 'https://www.banglanews24.com',
     },
     openGraph: {
         title: 'bangla news and entertainment 24x7 - banglanews24.com',
         description: 'BanglaNews24 is the most popular online Bangla news portal in Bangladesh covering all latest BD News and international news Top and instant 24 7 Live News provider in BD.',
-        url: 'https://en.banglanews24.com',
+        url: 'https://www.banglanews24.com',
         siteName: 'news24bd',
         images: [
             {
-                url: 'https://en.banglanews24.com/default-img.jpg',
+                url: 'https://www.banglanews24.com/default-img.jpg',
                 width: 800,
                 height: 600,
             }
@@ -119,8 +119,6 @@ export default async function Home() {
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-1" catId="home" w="320" h="100" />
 
-            {/* {dayName} */}
-
             <LeadNews2 data={data.leadNews} video={[]} bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} specialVideo={data.special_video} homeVideoSlide={data.home_videoSlide} />
 
             {/* <LeadNews data={data.leadNews} video={[]} bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} specialVideo={data.special_video} homeVideoSlide={data.home_videoSlide} /> */}
@@ -132,12 +130,12 @@ export default async function Home() {
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-5" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-6" catId="home" w="320" h="250" />
 
-            <Section8 title="National" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
+            <Section8 title="জাতীয়" data={data.homeCat_1} hrf="/category/national" adPosition="desktop-home-section-6" bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} />
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-6" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-7" catId="home" w="320" h="250" />
 
-            <Section9 title="রাজনীতি" data={data.homeCat_2} hrf="/category/politics" latest={data.latest} mostRead={data.mostRead} />
+            <Section9 title="রাজনীতি" data={data.homeCat_2} hrf="/category/politics" latest={data.latest} mostRead={data.most_read} />
 
             <LazySection fallback={<CardSkeleton />}>
                 <div className='container'>
@@ -185,9 +183,9 @@ export default async function Home() {
                 <Section2 title="লাইফস্টাইল" data={data.homeCat_12} hrf="/category/lifestyle" />
             </LazySection>
 
-            {/* <LazySection fallback={<CardSkeleton />}>
+            <LazySection fallback={<CardSkeleton />}>
                 <Photogallery />
-            </LazySection> */}
+            </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
                 <div className="container mt-4">
