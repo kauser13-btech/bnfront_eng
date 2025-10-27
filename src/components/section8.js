@@ -13,7 +13,7 @@ const Section8 = ({ title, data, hrf = '', adPosition, bannerDesktop, bannerMobi
                 <h3 className="mb-4 pb-2 border-bottom">
                     {title}
                     {hrf != '' &&
-                        <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>এই বিভাগের সব খবর <i className="bi bi-chevron-right"></i></CustomLink>
+                        <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>More news of {title} <i className="bi bi-chevron-right"></i></CustomLink>
                     }
                 </h3>
                 <div className={`${styles.carArea} row`}>

@@ -138,8 +138,8 @@ const DetailsPage = async ({ params }) => {
 
             <time className="text-black-50">
                 <i className="bi bi-stopwatch text-primary me-2"></i>
-                প্রকাশ: {newsData.date_at}
-                {(newsData.updated_by != null && newsData.edit_at != '') && ` | আপডেট: ${newsData.edit_at}`}
+                Publish: {newsData.date_at}
+                {(newsData.updated_by != null && newsData.edit_at != '') && ` | Update: ${newsData.edit_at}`}
             </time>
 
             <div className={`row ${styles.detailsArea}`}>
@@ -157,14 +157,14 @@ const DetailsPage = async ({ params }) => {
                 <div className="col-12">
                     <DesktopAd adData={data.banner_desktop} position="desktop-details-section-2" catId={mID} w="300" h="250" nid={data.details.n_id} />
 
-                    <NewsList data={data.latest} title="সর্বশেষ সংবাদ" />
+                    <NewsList data={data.latest} title="Latest News" />
 
                     <div className="mt-4">
                         <DesktopAd adData={data.banner_desktop} position="desktop-details-section-3" catId={mID} w="300" h="250" nid={data.details.n_id} />
                     </div>
 
                     <div className="sticky-top">
-                        <NewsList data={data.most_read} title="সর্বাধিক পঠিত" />
+                        <NewsList data={data.most_read} title="Most Read" />
 
                         <div className="my-4">
                             <DesktopAd adData={data.banner_desktop} position="desktop-details-section-4" catId={mID} w="300" h="250" nid={data.details.n_id} />

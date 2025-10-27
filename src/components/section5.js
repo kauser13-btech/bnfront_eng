@@ -11,7 +11,7 @@ const Section5 = ({ title, data, hrf }) => {
         <section className="section5 mt-4">
             <h3 className="mb-4 pb-2 border-bottom">
                 {title}
-                <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>আরও <i className="bi bi-chevron-right"></i></CustomLink>
+                <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>More <i className="bi bi-chevron-right"></i></CustomLink>
             </h3>
             <div className="row">
                 <div className="col-12 col-xl-6 mb-5 mb-xl-0">

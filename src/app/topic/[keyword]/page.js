@@ -40,7 +40,7 @@ const Topic = async ({ params }) => {
             <div className="container">
                 <ol className="breadcrumb mt-5">
                     <li className="breadcrumb-item"><a href={`/`}><i className="bi bi-house"></i></a></li>
-                    <li className="breadcrumb-item active" aria-current="page">{decodeURI(params.keyword == "todayall" ? 'আজকের সব খবর' : params.keyword)}</li>
+                    <li className="breadcrumb-item active" aria-current="page">{decodeURI(params.keyword == "todayall" ? "Today's All News" : params.keyword)}</li>
                 </ol>
 
                 <div className="row">

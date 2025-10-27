@@ -48,7 +48,7 @@ const Offcanvas = ({ data }) => {
                         <a className="nav-link fs-5" aria-current="page" href={`/`}><i className="bi bi-house"></i></a>
                     </li>
                     <li className="nav-item">
-                        <CustomLink prefetch={false} className="nav-link fs-5" href={`/video`}>ভিডিও</CustomLink>
+                        <CustomLink prefetch={false} className="nav-link fs-5" href={`/video`}>Video</CustomLink>
                     </li>
 
 

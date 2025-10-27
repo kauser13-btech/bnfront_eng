@@ -12,7 +12,7 @@ const Section4 = ({ title, data, hrf = '' }) => {
             <h3 className="mb-3 pb-2 border-bottom">
                 {title}
                 {hrf != '' &&
-                    <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>আরও <i className="bi bi-chevron-right"></i></CustomLink>
+                    <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>More <i className="bi bi-chevron-right"></i></CustomLink>
                 }
             </h3>
 

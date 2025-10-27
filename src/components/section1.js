@@ -14,7 +14,7 @@ const Section1 = ({ title, data, hrf = '' }) => {
                 <h3 className="mb-4 pb-2 border-bottom">
                     {title}
                     {hrf != '' &&
-                        <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>এই বিভাগের সব খবর <i className="bi bi-chevron-right"></i></CustomLink>
+                        <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>All News of {title} <i className="bi bi-chevron-right"></i></CustomLink>
                     }
                 </h3>
                 <div className="row">

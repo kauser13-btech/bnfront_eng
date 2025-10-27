@@ -13,7 +13,7 @@ const Section9 = ({ title, data, hrf = '', latest, mostRead }) => {
                         <h3 className="mb-4 pb-2 border-bottom">
                             {title}
                             {hrf != '' &&
-                                <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>এই বিভাগের সব খবর <i className="bi bi-chevron-right"></i></CustomLink>
+                                <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={hrf}>More news of {title} <i className="bi bi-chevron-right"></i></CustomLink>
                             }
                         </h3>
                         <div className="row">
@@ -61,7 +61,7 @@ const Section9 = ({ title, data, hrf = '', latest, mostRead }) => {
                                         aria-controls="home-tab-pane"
                                         aria-selected="true"
                                     >
-                                        সর্বশেষ
+                                        Latest
                                     </button>
                                 </li>
                                 <li className="nav-item flex-fill text-center" role="presentation">
@@ -75,7 +75,7 @@ const Section9 = ({ title, data, hrf = '', latest, mostRead }) => {
                                         aria-controls="profile-tab-pane"
                                         aria-selected="false"
                                     >
-                                        সর্বাধিক পঠিত
+                                        Most Read
                                     </button>
                                 </li>
                             </ul>

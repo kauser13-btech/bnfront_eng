@@ -61,7 +61,7 @@ const Page = async () => {
                 <div key={i} className="mb-4">
                     <h4 className="mb-4 pb-2 border-bottom">
                         {row.name}
-                        <CustomLink prefetch={false} className="float-end fs-6 mt-2" href={`/video/${row.id}`}>আরও <i className="bi bi-chevron-right"></i></CustomLink>
+                        <CustomLink prefetch={false} className="float-end fs-6 mt-2" href={`/video/${row.id}`}>More <i className="bi bi-chevron-right"></i></CustomLink>
                     </h4>
                     <div className="row">
                         <div className="col-12 col-xl-4">

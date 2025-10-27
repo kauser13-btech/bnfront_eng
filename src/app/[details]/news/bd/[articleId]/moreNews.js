@@ -47,8 +47,8 @@ const MoreNews = ({ moreNewsData }) => {
 
             <time className="text-black-50">
                 <i className="bi bi-stopwatch text-primary me-2"></i>
-                প্রকাশ: {moreNewsData.date_at}
-                {(moreNewsData.updated_by != null && moreNewsData.edit_at != '') && ` | আপডেট: ${moreNewsData.edit_at}`}
+                Publish: {moreNewsData.date_at}
+                {(moreNewsData.updated_by != null && moreNewsData.edit_at != '') && ` | Update: ${moreNewsData.edit_at}`}
             </time>
             <div className="mt-3 pt-3 border-top">
                 {(moreNewsData.main_image && moreNewsData.main_video == 0) ?
@@ -71,7 +71,7 @@ const MoreNews = ({ moreNewsData }) => {
 
                 <div className={`position-absolute left-0 right-0 w-100 ${styles.moreReading}`}>
                     <div className="d-grid gap-2 col-6 col-md-2 col-xl-3 col-xxl-2 mt-5 pt-5">
-                        <CustomLink prefetch={false} href={`/${moreNewsData.cat_name.slug}/news/bd/${moreNewsData.n_id}.details`} className="btn btn-outline-secondary" type="button">বাকি অংশ পড়ুন <i className="bi bi-arrow-right-short"></i></CustomLink>
+                        <CustomLink prefetch={false} href={`/${moreNewsData.cat_name.slug}/news/bd/${moreNewsData.n_id}.details`} className="btn btn-outline-secondary" type="button">Read More <i className="bi bi-arrow-right-short"></i></CustomLink>
                     </div>
                 </div>
             </article>

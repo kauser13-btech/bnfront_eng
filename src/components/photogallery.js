@@ -57,8 +57,8 @@ const Photogallery = () => {
         <section className={`container ${styles.galleryWrapper}`}>
             <div className="mt-4">
                 <h3 className="border-bottom pb-2 mb-2 mx-5">
-                    ফটো গ্যালারি
-                    <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={`/photo`}>আরও <i className="bi bi-chevron-right"></i></CustomLink>
+                    Photo Gallery 
+                    <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={`/photo`}>More <i className="bi bi-chevron-right"></i></CustomLink>
                 </h3>
 
                 <Slider {...sliderSettings}>

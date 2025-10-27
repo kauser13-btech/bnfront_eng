@@ -36,7 +36,7 @@ const LoadMorePagination = ({ cat, data, searchParams, desktpAdData, mobileAdDat
                 setCurrentPage(prevPage => prevPage + 1);
             }
         } catch (error) {
-            console.error('এই পোস্টগুলি লোড করতে সমস্যা হয়েছে:', error);
+            console.error('Problem to load those News:', error);
         } finally {
             setIsLoading(false);
         }
@@ -90,7 +90,7 @@ const LoadMorePagination = ({ cat, data, searchParams, desktpAdData, mobileAdDat
                         <button onClick={fetchPosts} disabled={isLoading}
                             className="btn btn-outline-secondary"
                         >
-                            {isLoading ? 'লোড হচ্ছে...' : 'আরো দেখুন'}
+                            {isLoading ? 'Loading...' : 'See More'}
                         </button>
                     </div>
                 )}
@@ -98,19 +98,19 @@ const LoadMorePagination = ({ cat, data, searchParams, desktpAdData, mobileAdDat
 
             <div className="row g-3 align-items-center mt-2 justify-content-center">
                 <div className="col-auto">
-                    <label className="col-form-label text-black-50">পুরোনো সংবাদ গুলো দেখতে এখানে ক্লিক করুন</label>
+                    <label className="col-form-label text-black-50">Click Here To Read Old News</label>
                 </div>
                 <div className="col-auto">
                     <select className="form-select w-auto" onChange={async (e) => { await handleChange(e) }} value={getYear}>
                         <option value={(getYear) ? getYear : ''}>{(getYear) ? getYear : '--'}</option>
-                        <option value="">সাম্প্রতিক</option>
-                        <option value="2023">২০২৩</option>
-                        <option value="2022">২০২২</option>
-                        <option value="2021">২০২১</option>
-                        <option value="2020">২০২০</option>
-                        <option value="2019">২০১৯</option>
-                        <option value="2018">২০১৮</option>
-                        <option value="2017">২০১৭</option>
+                        <option value="">Latest</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
                     </select>
                 </div>
             </div>

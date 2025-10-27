@@ -31,7 +31,7 @@ export default function Section7() {
                 setCurrentPage(page + 1);
             }
         } catch (error) {
-            console.error('এই পোস্টগুলি লোড করতে সমস্যা হয়েছে:', error);
+            console.error('Problem to load those news:', error);
         } finally {
             setIsLoading(false);
         }
@@ -51,7 +51,7 @@ export default function Section7() {
     return (
         <div className="container section7">
             <div className="col-12 col-lg-8 mx-auto p-4">
-                <h3 className="border-bottom pb-2 mb-3">আরও খবর</h3>
+                <h3 className="border-bottom pb-2 mb-3">More News</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {posts.map((row, i) => (
                         <div className="card border-0 bg-transparent rounded-0 mb-3" key={row.n_id || i}>
@@ -91,12 +91,12 @@ export default function Section7() {
                         disabled={isLoading}
                         className="mt-6 px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 disabled:opacity-50"
                     >
-                        {isLoading ? 'লোড হচ্ছে...' : 'আরো দেখুন'}
+                        {isLoading ? 'Loading...' : 'See More'}
                     </button>
                 )}
 
                 {!hasMore && posts.length > 0 && (
-                    <p className="mt-6 text-center text-gray-500">সব পোস্ট দেখানো হয়েছে</p>
+                    <p className="mt-6 text-center text-gray-500">All News Displayed</p>
                 )}
             </div>
         </div>

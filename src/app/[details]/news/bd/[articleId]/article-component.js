@@ -163,7 +163,7 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
             </div>
 
             <div className="ads my-4 d-flex justify-content-center">
-                <a href={`https://news.google.com/publications/CAAqLAgKIiZDQklTRmdnTWFoSUtFR0poYm1kc1lXNWxkM015TkM1amIyMG9BQVAB?hl=bn&gl=BD&ceid=BD%3Abn`} target="_blank"><Image src={gnews_logo} width="32" height="32" className="mw-100 h-auto border-0" alt="banglanews24 Google News channel" /> বাংলানিউজটোয়েন্টিফোর খবর পেতে গুগল নিউজ চ্যানেল ফলো করুন. </a>
+                <a href={`https://news.google.com/publications/CAAqLAgKIiZDQklTRmdnTWFoSUtFR0poYm1kc1lXNWxkM015TkM1amIyMG9BQVAB?hl=bn&gl=BD&ceid=BD%3Abn`} target="_blank"><Image src={gnews_logo} width="32" height="32" className="mw-100 h-auto border-0" alt="banglanews24 Google News channel" /> Follow banglanews24 Google News to Get more news. </a>
             </div>
 
             <ul className="list-group list-group-horizontal border-top border-bottom">
@@ -189,7 +189,7 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
             {newsData.meta_keyword &&
                 <div className="mt-4">
                     <p className="d-inline-flex gap-1">
-                        <a className="btn border-0 disabled" aria-disabled="true" role="button" data-bs-toggle="button">টপিক:</a>
+                        <a className="btn border-0 disabled" aria-disabled="true" role="button" data-bs-toggle="button">Topic:</a>
                         {newsData.meta_keyword.split(",").map((row, i) =>
                             <CustomLink key={i} href={`/topic/${row}`} className="btn">{row}</CustomLink>
                         )}

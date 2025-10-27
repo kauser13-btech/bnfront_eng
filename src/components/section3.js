@@ -65,7 +65,7 @@ const Section3 = () => {
     return (
         <section className="container section3 mt-4">
             <div className="">
-                <h3 className="border-bottom  pb-2 mb-2">ভিডিও গ্যালারি</h3>
+                <h3 className="border-bottom  pb-2 mb-2">Video Gallery</h3>
                 <div className="row">
                     {posts && posts.slice(0, 2).map((row, i) =>
                         <div key={i} className="col-12 col-xl-6 mb-4 mb-xl-0">

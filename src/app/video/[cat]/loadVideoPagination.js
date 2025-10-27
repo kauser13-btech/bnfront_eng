@@ -25,7 +25,7 @@ export default function LoadVideoPagination({ cat }) {
                 setCurrentPage(prevPage => prevPage + 1);
             }
         } catch (error) {
-            console.error('এই পোস্টগুলি লোড করতে সমস্যা হয়েছে:', error);
+            console.error('Problem to see those news:', error);
         } finally {
             setIsLoading(false);
         }
@@ -51,12 +51,12 @@ export default function LoadVideoPagination({ cat }) {
 
             {hasMore && (
                 <div className="d-flex justify-content-center mt-4">
-                <button onClick={fetchPosts} disabled={isLoading} className="btn btn-secondary w-25">{isLoading ? 'লোড হচ্ছে...' : 'আরো দেখুন'}</button>
+                <button onClick={fetchPosts} disabled={isLoading} className="btn btn-secondary w-25">{isLoading ? 'Loading...' : 'See More'}</button>
                 </div>
             )}
 
             {!hasMore && posts.length > 0 && (
-                <p className="mt-6 text-center text-gray-500">সব পোস্ট দেখানো হয়েছে</p>
+                <p className="mt-6 text-center text-gray-500">All News Displayed</p>
             )}
         </div>
     );

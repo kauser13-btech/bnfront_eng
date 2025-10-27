@@ -31,9 +31,9 @@ const VideoLayout = async ({ children }) => {
             <div className="row flex-column flex-md-row">
                 <div className="col-12 col-md-3">
                     <nav className="bg-light p-3 border-end sticky-md-top" style={{ top: '3rem', zIndex: 1020 }}>
-                        <h5 className="mb-3 text-center text-md-start fs-4 border-bottom pb-2"><i className="bi bi-tv"></i> ভিডিও</h5>
+                        <h5 className="mb-3 text-center text-md-start fs-4 border-bottom pb-2"><i className="bi bi-tv"></i> Video</h5>
                         <ul className="nav flex-row flex-md-column text-md-start">
-                            <CustomLink className="nav-link fs-5 active" href={`/video`}>হোম</CustomLink>
+                            <CustomLink className="nav-link fs-5 active" href={`/video`}>Home</CustomLink>
                             {data.gallery_cat.map((row, i) =>
                                 <li key={i} className="nav-item me-3 me-md-0 mb-md-2">
                                     <CustomLink className="nav-link fs-5 active" href={`/video/${row.id}`}>{row.name}</CustomLink>
