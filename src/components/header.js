@@ -29,7 +29,7 @@ const Header = async () => {
                             <Image src={logoImg.src} className={`w-100 h-auto mainLogo`} alt={`logo`} width={480} height={483} quality={100} />
                         </a>
                         <div className="clearfix"></div>
-                        <time dangerouslySetInnerHTML={{ __html: todayDate }} />
+                        {/* <time dangerouslySetInnerHTML={{ __html: todayDate }} /> */}
 
                     </div>
                     <div className="p-2 pe-0">
