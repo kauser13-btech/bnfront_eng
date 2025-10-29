@@ -32,7 +32,7 @@ export const metadata = {
         title: 'Video - banglanews24.com',
         description: 'BanglaNews24 is the most popular online Bangla news portal in Bangladesh covering all latest BD News and international news Top and instant 24 7 Live News provider in BD.',
         url: 'https://en.banglanews24.com/video',
-        siteName: 'news24bd',
+        siteName: 'banglanews24',
         images: [
             {
                 url: 'https://en.banglanews24.com/default-img.jpg',

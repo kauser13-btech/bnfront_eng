@@ -21,10 +21,10 @@ export async function GET() {
     const xml = `<?xml version="1.0" encoding="utf-8"?>  
         <rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
         <channel>  
-            <title>news24bd</title>
-            <link>https://www.news24bd.tv</link>
-            <description>news24bd RSS Feed</description>
-            <atom:link href="https://www.news24bd.tv/rss.xml" rel="self" type="application/rss+xml" />
+            <title>banglanews24</title>
+            <link>https://en.banglanews24.com</link>
+            <description>banglanews24 RSS Feed</description>
+            <atom:link href="https://en.banglanews24.com/rss.xml" rel="self" type="application/rss+xml" />
 
             ${items}
 
