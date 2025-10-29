@@ -49,8 +49,8 @@ const Section8 = ({ title, data, hrf = '', adPosition, bannerDesktop, bannerMobi
                         <DesktopAd adData={bannerDesktop} position={adPosition} catId="home" w="300" h="250" />
 
                         <div className="mt-3">
-                            {leadNewsMore.slice(5, 7).map((row, i) =>
-                                <div key={i} className={`position-relative ${i == 0 && 'mb-3 pb-3 border-bottom'}`}>
+                            {leadNewsMore.slice(5, 10).map((row, i) =>
+                                <div key={i} className={`position-relative ${i < 4 && 'mb-3 pb-3 border-bottom'}`}>
                                     <div className="row">
                                         <div className="col-5">
                                             <ViewImg image={row.main_image} cls="card-img-top w-100 h-auto border-top-0 border-start-0 border-end-0" alt={row.n_head} />

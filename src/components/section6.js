@@ -61,7 +61,7 @@ const Section6 = ({ title, data, hrf, adPosition, bannerDesktop, bannerMobile })
                         <div className="col-12 order-3 order-xl-3">
                             <DesktopAd adData={bannerDesktop} position={adPosition} catId="home" w="300" h="250" />
 
-                            {leadNewsMore.slice(5, 6).map((row, i) =>
+                            {leadNewsMore.slice(5, 9).map((row, i) =>
                                 <div key={i} className="position-relative mb-3 bg-body-tertiary">
                                     <div className="row">
                                         <div className="col-4 position-relative">

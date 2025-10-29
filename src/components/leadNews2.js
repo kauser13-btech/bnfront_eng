@@ -11,9 +11,8 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
 
     return (
         <section className="container mt-3">
-            <div className={`row ${styles.newLeadArea}`}>
+            <div className={`row `}>
                 <div className="col-12">
-
                     <div className="row">
                         <div className="col-12 col-lg-4 order-2 order-xl-1">
                             {leadMore.slice(6, 11).map((row, i) =>
