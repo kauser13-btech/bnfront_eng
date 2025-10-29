@@ -37,7 +37,7 @@ const BodyTopAd = () => {
         <>
             {(getSlotId != '' && !isMobile) &&
                 <div className="body-top-ad bg-light isDesktop">
-                    <div className="col-md-12">
+                    {/* <div className="col-md-12">
                         <div className="ads d-flex justify-content-center">
                             <DFPSlotsProvider dfpNetworkId="21675215918">
                                 <div className="desktopView">
@@ -45,7 +45,7 @@ const BodyTopAd = () => {
                                 </div>
                             </DFPSlotsProvider>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             }
         </>
