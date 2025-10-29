@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }) {
     const n_id = articleId.endsWith('.details') ? articleId.slice(0, -'.details'.length) : articleId;
     const data = await getCategoryData(n_id);
 
-    const getUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${details}/news/bd/${articleId}`;
+    const getUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${data.details.cat_name.slug}/news/bd/${articleId}`;
 
     return {
         title: data.details.n_head,
