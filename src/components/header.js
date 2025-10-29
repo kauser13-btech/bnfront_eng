@@ -4,21 +4,26 @@ import ViewImg from "./viewImg";
 import logoImg from "../../public/img/logo.jpg";
 import Image from "next/image";
 
-async function getData() {
-    const res = await fetch(`${process.env.API_URL}/web_todaysdate`, {
-        headers: { "Accept-Encoding": "gzip,deflate,compress" },
-        next: { revalidate: 300 }
-    });
+// async function getData() {
+//     const res = await fetch(`${process.env.API_URL}/web_todaysdate`, {
+//         headers: { "Accept-Encoding": "gzip,deflate,compress" },
+//         next: { revalidate: 300 }
+//     });
 
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
-    }
+//     if (!res.ok) {
+//         throw new Error('Failed to fetch data');
+//     }
 
-    return res.json();
-}
+//     return res.json();
+// }
 
 const Header = async () => {
-    const todayDate = await getData();
+    // const todayDate = await getData();
+
+    const nd = new Date();
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const Today = `${weekday[nd.getDay()]} ${("0" + (nd.getDate())).slice(-2)} ${months[nd.getMonth()]} ${nd.getFullYear()}`;
 
     return (
         <header className="container d-none d-xl-block">
@@ -28,12 +33,9 @@ const Header = async () => {
                         <a className="d-block mb-2" href={`/`}>
                             <Image src={logoImg.src} className={`w-100 h-auto mainLogo`} alt={`logo`} width={480} height={483} quality={100} />
                         </a>
-                        <div className="clearfix"></div>
-                        {/* <time dangerouslySetInnerHTML={{ __html: todayDate }} /> */}
-
                     </div>
-                    <div className="p-2 pe-0">
-                        <ul className="list-group list-group-horizontal mb-2 float-end mt-4">
+                    <div className="p-0 pe-0">
+                        <ul className="list-group list-group-horizontal mb-2 float-end mt-2">
                             <li className="list-group-item">
                                 <a className="text-dark fs-6" href="https://www.facebook.com/banglanews24"><i className="bi bi-facebook"></i></a>
                             </li>
@@ -53,6 +55,9 @@ const Header = async () => {
                                 <a className="text-dark fs-6" href="https://www.linkedin.com/company/banglanews24digital/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BRm2TgTL%2BTGCcsmi0Ln357Q%3D%3D"><i className="bi bi-linkedin"></i></a>
                             </li>
                         </ul>
+
+                        <div className="clearfix"></div>
+                        <time className="text-end d-block" dangerouslySetInnerHTML={{ __html: Today }} />
                     </div>
                 </div>
             </div>

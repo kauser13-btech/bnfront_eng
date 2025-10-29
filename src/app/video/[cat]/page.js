@@ -40,7 +40,7 @@ export async function generateMetadata({ params, searchParams }) {
             siteName: 'banglanews24.com',
             images: [
                 {
-                    url: 'https://www.banglanews24.com/default-img.jpg',
+                    url: 'https://en.banglanews24.com/default-img.jpg',
                     width: 800,
                     height: 600,
                 }

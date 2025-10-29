@@ -75,7 +75,7 @@ const Navbar = async () => {
                                 <CustomLink prefetch={false} className="fs-6" href={`/video`}>Video</CustomLink>
                             </li>
                             <li className="list-group-item rounded-0 pb-0 pt-2 border-start-0 border-top-0 border-bottom-0">
-                                <CustomLink prefetch={false} className="fs-6" href={`https://www.banglanews24.com/`}>বাংলা</CustomLink>
+                                <CustomLink prefetch={false} className="fs-6" href={`https://en.banglanews24.com/`}>বাংলা</CustomLink>
                             </li>
                             <li className="list-group-item rounded-0 py-0 border-top-0 border-bottom-0">
                                 <SearchBTN />
