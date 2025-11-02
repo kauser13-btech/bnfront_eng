@@ -90,7 +90,7 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
         event.preventDefault();
         var a = window.open('', '', 'height=800, width=800');
         a.document.write('<html><body>');
-        a.document.write(`<img style="width:250px;display:block;margin:0 auto 15px auto;" src="${process.env.NEXT_PUBLIC_BASE_URL}/img/logo.png" alt="Logo" /> <hr/>`);
+        a.document.write(`<img style="width:250px;display:block;margin:0 auto 15px auto;" src="${process.env.NEXT_PUBLIC_BASE_URL}/img/logo.jpg" alt="Logo" /> <hr/>`);
         a.document.write(`<h3>${(newsData.n_solder) ? htmlDecode(newsData.n_solder) : ''}</h3>`);
         a.document.write(`<h1>${(newsData.n_head) ? htmlDecode(newsData.n_head) : ''} </h1>`);
         a.document.write(`<h4>${(newsData.n_subhead) ? htmlDecode(newsData.n_subhead) : ''} </h4>`);
