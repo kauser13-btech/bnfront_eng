@@ -142,36 +142,38 @@ const DetailsPage = async ({ params }) => {
                 {(newsData.updated_by != null && newsData.edit_at != '') && ` | Update: ${newsData.edit_at}`}
             </time>
 
-            <div className={`row ${styles.detailsArea}`}>
-                <div className="col-12">
-                    <ArticleComponent newsData={newsData} desktopAdData={data.banner_desktop} mobileAdData={data.banner_mobile} mID={mID} />
+            <div className="border-top pt-2 mt-2">
+                <div className={`row ${styles.detailsArea}`}>
+                    <div className="col-12">
+                        <ArticleComponent newsData={newsData} desktopAdData={data.banner_desktop} mobileAdData={data.banner_mobile} mID={mID} />
 
-                    <div className="mt-4 border-top">
-                        {data.more_news.map((moreNews, i) =>
-                            <LazySection key={i} fallback={<CardSkeleton />}>
-                                <MoreNews moreNewsData={moreNews} />
-                            </LazySection>
-                        )}
+                        <div className="mt-4 border-top">
+                            {data.more_news.map((moreNews, i) =>
+                                <LazySection key={i} fallback={<CardSkeleton />}>
+                                    <MoreNews moreNewsData={moreNews} />
+                                </LazySection>
+                            )}
+                        </div>
                     </div>
-                </div>
-                <div className="col-12">
-                    <DesktopAd adData={data.banner_desktop} position="desktop-details-section-2" catId={mID} w="300" h="250" nid={data.details.n_id} />
+                    <div className="col-12">
+                        <DesktopAd adData={data.banner_desktop} position="desktop-details-section-2" catId={mID} w="300" h="250" nid={data.details.n_id} />
 
-                    <NewsList data={data.latest} title="Latest News" />
+                        <NewsList data={data.latest} title="Latest News" />
 
-                    <div className="mt-4">
-                        <DesktopAd adData={data.banner_desktop} position="desktop-details-section-3" catId={mID} w="300" h="250" nid={data.details.n_id} />
-                    </div>
+                        <div className="mt-4">
+                            <DesktopAd adData={data.banner_desktop} position="desktop-details-section-3" catId={mID} w="300" h="250" nid={data.details.n_id} />
+                        </div>
 
-                    <div className="sticky-top">
-                        <NewsList data={data.most_read} title="Most Read" />
+                        <div className="sticky-top">
+                            <NewsList data={data.most_read} title="Most Read" />
 
-                        <div className="my-4">
-                            <DesktopAd adData={data.banner_desktop} position="desktop-details-section-4" catId={mID} w="300" h="250" nid={data.details.n_id} />
+                            <div className="my-4">
+                                <DesktopAd adData={data.banner_desktop} position="desktop-details-section-4" catId={mID} w="300" h="250" nid={data.details.n_id} />
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
 

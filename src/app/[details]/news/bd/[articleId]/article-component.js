@@ -104,7 +104,7 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
 
     return (
         <>
-            <div className="mt-3 pt-3 border-top">
+            <div className="">
                 {(newsData.main_image && newsData.main_video == 0) ?
                     <figure className="figure w-100">
                         <ViewImg image={newsData.main_image} cls="w-100 h-auto" alt={newsData.n_head} />
