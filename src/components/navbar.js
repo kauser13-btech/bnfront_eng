@@ -29,6 +29,10 @@ const Navbar = async () => {
                 <a className="navbar-brand d-block d-xl-none" href={`/`}>
                     <Image src={logoImg.src} className={`w-75 h-auto`} alt={`logo`} width={800} height={483} quality={100} />
                 </a>
+                
+                <a href="https://www.banglanews24.com"
+                    className="text-danger rounded border border-success px-2">বাংলা</a>
+
                 <button className="navbar-toggler text-secondary fs-1 d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <i className="bi bi-list"></i>
                 </button>

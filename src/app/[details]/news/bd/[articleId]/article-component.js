@@ -182,6 +182,9 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
                 <li className="list-group-item border-0 ps-0 pe-3">
                     <a className="text-dark fs-5" href={`https://www.linkedin.com/shareArticle?url=${newsUrl}`}><i className="bi bi-linkedin"></i></a>
                 </li>
+                <li className="list-group-item border-0 ps-0 pe-3">
+                    <Link href={`#`} onClick={printNews} className="text-dark fs-5"><i className="bi bi-printer"></i></Link>
+                </li>
             </ul>
 
             <MobileAd adData={mobileAdData} position="mobile-details-section-7" catId={mID} w="300" h="250" nid={newsData.n_id} />
