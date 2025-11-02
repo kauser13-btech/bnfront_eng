@@ -31,7 +31,7 @@ const Navbar = async () => {
                 </a>
                 
                 <a href="https://www.banglanews24.com"
-                    className="text-danger rounded border border-success px-2">বাংলা</a>
+                    className="text-danger rounded border border-success px-2 d-block d-xl-none">বাংলা</a>
 
                 <button className="navbar-toggler text-secondary fs-1 d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <i className="bi bi-list"></i>
