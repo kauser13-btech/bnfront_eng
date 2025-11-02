@@ -79,12 +79,12 @@ const DetailsPage = async ({ params }) => {
                 <MobileAd adData={data.banner_mobile} position="no-ad" catId={mID} w="970" h="90" nid={data.details.n_id} />
             </div>
 
-            <WelcomeAd adSlotId="WelcomeADArticlePage" timeOut="13000" />
-            <MobileWelcomeAd adSlotId="ArticleMobile" timeOut="13000" />
+            {/* <WelcomeAd adSlotId="WelcomeADArticlePage" timeOut="13000" /> */}
+            {/* <MobileWelcomeAd adSlotId="ArticleMobile" timeOut="13000" /> */}
 
-            <BottomStickyAd adData={data.banner_desktop} position="desktop-details-bottom-sticky" catId={mID} w="970" h="90" nid={data.details.n_id} />
-            <MobileBottomStickyAd adData={data.banner_mobile} position="mobile-details-bottom-sticky" catId={mID} w="320" h="100" nid={data.details.n_id} />
-            { }
+            {/* <BottomStickyAd adData={data.banner_desktop} position="desktop-details-bottom-sticky" catId={mID} w="970" h="90" nid={data.details.n_id} /> */}
+            {/* <MobileBottomStickyAd adData={data.banner_mobile} position="mobile-details-bottom-sticky" catId={mID} w="320" h="100" nid={data.details.n_id} /> */}
+
             <div className="ad-1x1">
                 <DesktopAd adData={data.banner_desktop} position="desktop-details-1x1" catId={mID} w="1" h="1" nid={data.details.n_id} />
                 <MobileAd adData={data.banner_mobile} position="mobile-details-1x1" catId={mID} w="1" h="1" nid={data.details.n_id} />
