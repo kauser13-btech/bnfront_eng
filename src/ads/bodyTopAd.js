@@ -1,55 +1,60 @@
-"use client"
+'use client';
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-import { AdSlot, DFPManager, DFPSlotsProvider } from 'react-dfp';
-import ViewImg from "@/components/viewImg";
+import GPTAdSlot from './GPTAdSlot';
 
-const BodyTopAd = () => {
+export default function BodyTopAd() {
     const pathname = usePathname();
-    const [getSlotId, setSlotId] = useState('');
-	const [isMobile, setIsMobile] = useState(false);
-	useEffect(() => {
-		if (window.innerWidth <= 992) {
-			setIsMobile(true);
-		}
-	}, []);
+    const [isMobile, setIsMobile] = useState(null);
 
+    // মোবাইল চেক
     useEffect(() => {
-        const getRoute = pathname.substring(1).split("/");
+        const checkMobile = () => setIsMobile(window.innerWidth <= 992);
+        checkMobile();
 
-        if (getRoute[0] == '') {
-            setSlotId('DH-T1');
-        } else if (getRoute[0] == 'category') {
-            // category page
-            setSlotId('DC-T1');
-        } else if (getRoute[1] == 'news' && getRoute[2] == 'bd') {
-            // details page
-            setSlotId('DD-T1');
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // slotId ও adUnit নির্ধারণ (useMemo দিয়ে optimize)
+    const { slotId, adUnit } = useMemo(() => {
+        const getRoute = pathname.substring(1).split('/');
+
+        let baseSlot = '';
+        if (getRoute[0] === '') {
+            baseSlot = '/21675215918/DH-T1'; // হোম
+        } else if (getRoute[0] === 'category') {
+            baseSlot = '/21675215918/DC-T1'; // ক্যাটাগরি
+        } else if (getRoute[1] === 'news' && getRoute[2] === 'bd') {
+            baseSlot = '/21675215918/DD-T1'; // ডিটেইলস
         } else {
-            // else page
-            setSlotId('DC-T1');
+            baseSlot = '/21675215918/DC-T1'; // অন্যান্য
         }
 
-    }, [pathname])
+        const uniquePath = pathname === '/' ? 'home' : pathname.replace(/\//g, '-').replace(/^-/, '');
+        const finalSlotId = `${baseSlot.replace(/\//g, '-')}-${uniquePath}`;
+        const finalAdUnit = baseSlot;
+
+        return { slotId: finalSlotId, adUnit: finalAdUnit };
+    }, [pathname]);
+
+    if (isMobile === null || isMobile || !slotId) return null;
 
     return (
-        <>
-            {(getSlotId != '' && !isMobile) &&
-                <div className="body-top-ad bg-light isDesktop">
-                    {/* <div className="col-md-12">
-                        <div className="ads d-flex justify-content-center">
-                            <DFPSlotsProvider dfpNetworkId="21675215918">
-                                <div className="desktopView">
-                                    <AdSlot slotId={getSlotId} sizes={[[970, 90]]} adUnit={getSlotId} />
-                                </div>
-                            </DFPSlotsProvider>
-                        </div>
-                    </div> */}
+        <div className="body-top-ad bg-light isDesktop">
+            <div className="col-md-12">
+                <div className="ads d-flex justify-content-center ad-970x90">
+                    <div className="desktop-ads">
+                        <GPTAdSlot
+                            adUnit={adUnit}
+                            sizes={[[970, 90]]}
+                            slotId={slotId}
+                            refreshInterval={60000}
+                        />
+                    </div>
                 </div>
-            }
-        </>
-    )
+            </div>
+        </div>
+    );
 }
-
-export default BodyTopAd

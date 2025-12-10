@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PDF Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            color: white;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        #loading-text {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #aaa;
+        }
+        #error {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9998;
+        }
+        #error.show {
+            display: flex;
+        }
+        .error-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        .error-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f44336;
+        }
+        .error-message {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .retry-btn {
+            padding: 12px 30px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .retry-btn:active {
+            background: #45a049;
+        }
+        .viewer-select {
+            margin-top: 20px;
+            padding: 10px;
+            background: #2a2a2a;
+            border-radius: 5px;
+        }
+        .viewer-select label {
+            display: block;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        #pdf-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: none;
+            background: white;
+        }
+        #pdf-frame.show {
+            display: block;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .controls.show {
+            display: flex;
+        }
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .control-btn:active {
+            background: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <div id="loading-text">PDF লোড হচ্ছে...</div>
+    </div>
+
+    <!-- Error Screen -->
+    <div id="error">
+        <div class="error-icon">⚠️</div>
+        <div class="error-title">PDF লোড করতে সমস্যা</div>
+        <div class="error-message" id="error-msg">
+            PDF ফাইলটি লোড করা যাচ্ছে না। অনুগ্রহ করে আবার চেষ্টা করুন।
+        </div>
+        <div class="viewer-select">
+            <div style="margin-bottom: 10px; font-weight: bold;">Viewer পরিবর্তন করুন:</div>
+            <label>
+                <input type="radio" name="viewer" value="google" checked>
+                Google Docs Viewer (CORS এর জন্য ভালো)
+            </label>
+            <label>
+                <input type="radio" name="viewer" value="mozilla">
+                Mozilla PDF.js (Proxy দিয়ে)
+            </label>
+            <label>
+                <input type="radio" name="viewer" value="direct">
+                Direct Load (Browser Default)
+            </label>
+        </div>
+        <button class="retry-btn" onclick="retryLoad()">🔄 আবার চেষ্টা করুন</button>
+    </div>
+
+    <!-- PDF Viewer Frame -->
+    <iframe id="pdf-frame" allowfullscreen></iframe>
+
+    <!-- Controls -->
+    <div class="controls" id="controls">
+        <button class="control-btn" onclick="reloadPdf()" title="Reload">🔄</button>
+    </div>
+
+    <script>
+        const loading = document.getElementById('loading');
+        const error = document.getElementById('error');
+        const errorMsg = document.getElementById('error-msg');
+        const pdfFrame = document.getElementById('pdf-frame');
+        const controls = document.getElementById('controls');
+        
+        let pdfUrl = '';
+        let currentViewer = 'mozilla';
+        let loadAttempts = 0;
+
+        // Get PDF URL from query parameter
+        function getPdfUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const link = params.get('pdflink');
+            if (link) {
+                // Decode if double encoded
+                try {
+                    const decoded = decodeURIComponent(link);
+                    return decoded;
+                } catch (e) {
+                    return link;
+                }
+            }
+            return '';
+        }
+
+        // Check if URL is valid
+        function isValidUrl(url) {
+            try {
+                new URL(url);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        // CORS Proxy options
+        const corsProxies = [
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url=',
+            'https://cors-anywhere.herokuapp.com/'
+        ];
+        
+        let currentProxyIndex = 0;
+
+        // Load PDF with selected viewer
+        function loadPdfWithViewer(url, viewer) {
+            let viewerUrl = '';
+            let finalUrl = url;
+            
+            // For Mozilla viewer, use CORS proxy
+            if (viewer === 'mozilla') {
+                finalUrl = corsProxies[currentProxyIndex] + encodeURIComponent(url);
+            }
+            
+            switch(viewer) {
+                case 'mozilla':
+                    viewerUrl = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(finalUrl)}`;
+                    break;
+                case 'google':
+                    viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`;
+                    break;
+                case 'direct':
+                    viewerUrl = url;
+                    break;
+                default:
+                    viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`;
+            }
+            
+            pdfFrame.src = viewerUrl;
+        }
+
+        // Show error
+        function showError(message) {
+            loading.style.display = 'none';
+            error.classList.add('show');
+            pdfFrame.classList.remove('show');
+            errorMsg.textContent = message;
+        }
+
+        // Hide error
+        function hideError() {
+            error.classList.remove('show');
+        }
+
+        // Retry load
+        function retryLoad() {
+            const selectedViewer = document.querySelector('input[name="viewer"]:checked').value;
+            currentViewer = selectedViewer;
+            loadAttempts++;
+            
+            // Try next CORS proxy if Mozilla viewer fails
+            if (selectedViewer === 'mozilla' && loadAttempts > 1) {
+                currentProxyIndex = (currentProxyIndex + 1) % corsProxies.length;
+            }
+            
+            hideError();
+            loading.style.display = 'flex';
+            document.getElementById('loading-text').textContent = `PDF লোড হচ্ছে (${currentViewer})...`;
+            
+            setTimeout(() => {
+                loadPdfWithViewer(pdfUrl, currentViewer);
+            }, 500);
+        }
+
+        // Reload PDF
+        function reloadPdf() {
+            pdfFrame.src = pdfFrame.src;
+        }
+
+        // Handle frame load
+        pdfFrame.addEventListener('load', function() {
+            setTimeout(() => {
+                loading.style.display = 'none';
+                pdfFrame.classList.add('show');
+                controls.classList.add('show');
+            }, 1000);
+        });
+
+        // Handle frame error
+        pdfFrame.addEventListener('error', function() {
+            showError('PDF লোড করতে ব্যর্থ। অন্য viewer দিয়ে চেষ্টা করুন।');
+        });
+
+        // Timeout handler
+        function setLoadTimeout() {
+            setTimeout(() => {
+                if (loading.style.display !== 'none') {
+                    if (loadAttempts === 0) {
+                        showError('PDF লোড করতে অনেক সময় লাগছে। অনুগ্রহ করে অন্য viewer দিয়ে চেষ্টা করুন।');
+                    }
+                }
+            }, 15000); // 15 second timeout
+        }
+
+        // Initialize
+        function init() {
+            pdfUrl = getPdfUrl();
+            
+            if (!pdfUrl) {
+                showError('❌ কোনো PDF URL পাওয়া যায়নি। অনুগ্রহ করে ?pdflink= parameter দিয়ে URL দিন।');
+                return;
+            }
+
+            if (!isValidUrl(pdfUrl)) {
+                showError(`❌ Invalid PDF URL: ${pdfUrl}`);
+                return;
+            }
+
+            // Get viewer from URL parameter if exists
+            const params = new URLSearchParams(window.location.search);
+            const viewerParam = params.get('viewer');
+            if (viewerParam) {
+                currentViewer = viewerParam;
+                const radio = document.querySelector(`input[value="${viewerParam}"]`);
+                if (radio) radio.checked = true;
+            } else {
+                // Default to Google for better CORS handling
+                currentViewer = 'google';
+            }
+
+            // Start loading
+            loadPdfWithViewer(pdfUrl, currentViewer);
+            setLoadTimeout();
+        }
+
+        // Start on page load
+        window.addEventListener('load', init);
+
+        // Handle mobile back button
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
