@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="bn">
             <body suppressHydrationWarning={true} className={notoSarifBengali.className}>
-                <BodyTopAd />
+                {/* <BodyTopAd /> */}
                 <main className="pt-lg-2">
                     <Header />
                     <Analytics />
