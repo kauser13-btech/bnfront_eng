@@ -33,6 +33,7 @@ async function getData() {
         return [];
     }
 }
+
 async function getData2() {
     try {
         const res = await fetch(`${process.env.API_URL}/web_home2`, {
