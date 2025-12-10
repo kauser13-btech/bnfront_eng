@@ -140,6 +140,10 @@ export default function RootLayout({ children }) {
                             function gtag(){window.dataLayer.push(arguments);}
                             gtag('js', new Date());
                             gtag('config', 'G-FR5KSYH0VK');
+
+                            gtag('event', 'epaper_view', {
+                                'app_name': 'English',
+                            });
                         `,
                     }}
                 />
