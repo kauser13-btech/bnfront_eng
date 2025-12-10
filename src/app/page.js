@@ -7,7 +7,6 @@ import Section6 from '@/components/section6';
 import Section7 from '@/components/section7';
 import Section8 from '@/components/section8';
 import Section9 from '@/components/section9';
-import SpecialSigmenNews from '@/components/specialSigmenNews';
 import DesktopAd from '@/ads/desktopAd';
 import MobileAd from '@/ads/mobileAd';
 import WelcomeAd from '@/ads/welcomeAd';
@@ -106,7 +105,6 @@ export default async function Home() {
                 <MobileAd adData={data.banner_mobile} position="mobile-catagory-1x1" catId="home" w="1" h="1" />
             </div>
 
-            <SpecialSigmenNews />
 
             <div className="mt-3">
                 <DesktopAd adData={data.banner_desktop} position="desktop-home-section-1" catId="home" w="970" h="90" />
