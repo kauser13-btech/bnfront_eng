@@ -167,6 +167,25 @@ export default function RootLayout({ children }) {
                     }}
                 />
 
+                <Script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" strategy="afterInteractive" />
+                <Script id="gpt-init" strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.googletag = window.googletag || { cmd: [] };
+                            window.googletag.cmd.push(function() {
+                                window.googletag.pubads().enableSingleRequest();
+                                window.googletag.pubads().collapseEmptyDivs();
+                                window.googletag.pubads().enableLazyLoad({
+                                    fetchMarginPercent: 200,
+                                    renderMarginPercent: 100,
+                                    mobileScaling: 2.0
+                                });
+                                window.googletag.enableServices();
+                            });
+                        `,
+                    }}
+                />
+
                 <Script id="app-bootstrap" src="/js/bootstrap.bundle.min.js" />
                 <Script id="app-jsonLd" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             </body>

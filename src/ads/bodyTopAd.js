@@ -25,11 +25,11 @@ export default function BodyTopAd() {
         if (getRoute[0] === '') {
             baseSlot = '/21675215918/EN_DH-Top'; // Home
         } else if (getRoute[0] === 'category') {
-            baseSlot = ''; // Category
+            baseSlot = '/21675215918/EN_DH-Top'; // Category
         } else if (getRoute[1] === 'news' && getRoute[2] === 'bd') {
-            baseSlot = ''; // Details
+            baseSlot = '/21675215918/EN_DH-Top'; // Details
         } else {
-            baseSlot = ''; // Category/Others
+            baseSlot = '/21675215918/EN_DH-Top'; // Category/Others
         }
 
         const uniquePath = pathname === '/' ? 'home' : pathname.replace(/\//g, '-').replace(/^-/, '');
