@@ -17,9 +17,9 @@ import Analytics from './analytics';
 import BackToTop from '@/components/backToTop';
 
 const notoSarifBengali = Noto_Serif_Bengali({
-  weight: ['400', '700'],
-  subsets: ['bengali'],
-  display: 'swap',
+    weight: ['400', '700'],
+    subsets: ['bengali'],
+    display: 'swap',
 });
 
 export const metadata = {
@@ -116,11 +116,13 @@ export default function RootLayout({ children }) {
     return (
         <html lang="bn">
             <body suppressHydrationWarning={true} className={notoSarifBengali.className}>
-                {/* <BodyTopAd /> */}
+
+                <BodyTopAd />
+
                 <main className="pt-lg-2">
                     <Header />
                     <Analytics />
-                    
+
                     <Suspense fallback={<SkeletonNavbar />}>
                         <Navbar />
                     </Suspense>

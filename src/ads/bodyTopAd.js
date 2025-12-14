@@ -23,13 +23,13 @@ export default function BodyTopAd() {
 
         let baseSlot = '';
         if (getRoute[0] === '') {
-            baseSlot = '/21675215918/DH-T1'; // হোম
+            baseSlot = '/21675215918/EN_DH-Top'; // Home
         } else if (getRoute[0] === 'category') {
-            baseSlot = '/21675215918/DC-T1'; // ক্যাটাগরি
+            baseSlot = ''; // Category
         } else if (getRoute[1] === 'news' && getRoute[2] === 'bd') {
-            baseSlot = '/21675215918/DD-T1'; // ডিটেইলস
+            baseSlot = ''; // Details
         } else {
-            baseSlot = '/21675215918/DC-T1'; // অন্যান্য
+            baseSlot = ''; // Category/Others
         }
 
         const uniquePath = pathname === '/' ? 'home' : pathname.replace(/\//g, '-').replace(/^-/, '');
