@@ -18,7 +18,7 @@ const nextConfig = {
 		],
 	},
 	generateBuildId: async () => {
-		return 'banglanews24EN';
+        return 'enbuild-id-' + Date.now();
 	},
 	async rewrites() {
 		return [
