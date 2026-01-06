@@ -25,7 +25,7 @@ export default function IframeBanner({ src, width = 970, height = 90, className 
     if (!shouldShow || !src) return null;
 
     return (
-        <div className="d-flex justify-content-center bg-light">
+        <div className="d-flex justify-content-center bg-light py-4">
             <div className={`iframe-banner-wrapper ${className}`}
                 style={{ width: `${width}px`, height: `${height}px`, overflow: 'hidden' }}>
                 <iframe src={src} frameBorder="0" scrolling="no" allowFullScreen loading="lazy" style={{ width: '100%', height: '100%', border: 'none', display: 'block' }} />
