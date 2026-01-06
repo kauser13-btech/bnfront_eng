@@ -14,6 +14,10 @@ const nextConfig = {
 			{
 				protocol: 'https',
 				hostname: 'bn-cdn.banglanews24.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'reachableads-av.s3.ap-southeast-1.amazonaws.com',
 			}
 		],
 	},
