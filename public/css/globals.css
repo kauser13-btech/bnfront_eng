@@ -246,10 +246,63 @@ main {
 .bottom-sticky-ad.show .sticky-ad-down {
     display: block;
 }
-.sticky-ad-mob-img{
+
+.sticky-ad-mob-img {
     width: 320px;
 }
 
+.header-social-dropdown .dropdown-menu {
+    z-index: 999999;
+    width: 700px;
+}
+
+
+.bi-facebook {
+    color: #1877F2;
+}
+
+.bi-youtube {
+    color: #FF0000;
+}
+
+.bi-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.bi-twitter-x,
+.bi-twitter {
+    color: #000000;
+}
+
+.bi-linkedin {
+    color: #0077B5;
+}
+
+.bi-threads {
+    color: transparent;
+    background: linear-gradient(45deg, #000000, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.bi-whatsapp {
+    color: #25D366;
+}
+
+.bi-telegram {
+    color: #0088CC;
+}
+
+.bi-tiktok {
+    color: #69C9D0;
+}
+
+.bi-pinterest {
+    color: #BD081C;
+}
 
 #back-to-top {
     position: fixed;
@@ -474,21 +527,22 @@ footer .app-links a {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
-    .mob_left_none{
+    .mob_left_none {
         float: unset !important;
         text-align: center;
         margin: 15px 0;
     }
 
-    .mob_left_none span, .mob_left_none a{
+    .mob_left_none span,
+    .mob_left_none a {
         float: unset !important;
     }
 
-    footer .app-links{
+    footer .app-links {
         text-align: center;
     }
 
-    footer .app-links .float-end{
+    footer .app-links .float-end {
         float: unset !important;
     }
 
@@ -548,21 +602,22 @@ footer .app-links a {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
-    .mob_left_none{
+    .mob_left_none {
         float: unset !important;
         text-align: center;
         margin: 15px 0;
     }
 
-    .mob_left_none span, .mob_left_none a{
+    .mob_left_none span,
+    .mob_left_none a {
         float: unset !important;
     }
 
-    footer .app-links{
+    footer .app-links {
         text-align: center;
     }
 
-    footer .app-links .float-end{
+    footer .app-links .float-end {
         float: unset !important;
     }
 }
@@ -723,7 +778,7 @@ footer .app-links a {
         font-size: 1rem !important;
     }
 
-    .mainLogo{
+    .mainLogo {
         width: 50% !important;
     }
 }
