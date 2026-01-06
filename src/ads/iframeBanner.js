@@ -1,16 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function IframeBanner({
-    src,
-    width = 970,               // fixed width in px
-    height = 90,               // fixed height in px
-    className = '',
-    device = 'both',
-}) {
-    const [isMobile, setIsMobile] = useState(false);
+export default function IframeBanner({ src, width = 970, height = 90, className = '', device }) {
+    const [isMobile, setIsMobile] = useState(null); // null diye start
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
+        setIsClient(true);
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 992);
         };
@@ -19,8 +15,10 @@ export default function IframeBanner({
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // client side render na hole kisu dekhabe na
+    if (!isClient || isMobile === null) return null;
+
     const shouldShow =
-        device === 'both' ||
         (device === 'mobile' && isMobile) ||
         (device === 'desktop' && !isMobile);
 
