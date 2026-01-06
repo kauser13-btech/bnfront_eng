@@ -15,6 +15,7 @@ import MobileWelcomeAd from '@/ads/mobileWelcomeAd';
 import BottomStickyAd from '@/ads/bottomStickyAd';
 import MobileBottomStickyAd from '@/ads/mobileBottomStickyAd';
 import LeadNews2 from '@/components/leadNews2';
+import IframeBanner from '@/ads/iframeBanner';
 
 export const revalidate = 60;
 
@@ -109,6 +110,10 @@ export default async function Home() {
 
             <div className="mt-3">
                 <DesktopAd adData={data.banner_desktop} position="desktop-home-section-1" catId="home" w="970" h="90" />
+
+                <div className="py-4">
+                    <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/970x90.html" height="90" width="970" device="desktop" />
+                </div>
             </div>
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-1" catId="home" w="320" h="100" />
