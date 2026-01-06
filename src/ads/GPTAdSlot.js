@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export default function GPTAdSlot({ adUnit, sizes, slotId, refreshInterval = 0, onSlotRenderEnded }) {
+export default function GPTAdSlot({ adUnit, sizes, slotId, refreshInterval = 45000, onSlotRenderEnded }) {
   const containerRef = useRef(null);
   const slotRef = useRef(null);
   const intervalRef = useRef(null);

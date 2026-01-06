@@ -116,6 +116,8 @@ export default async function Home() {
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-1" catId="home" w="320" h="100" />
 
+            <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/320x100.html" height="100" width="320" device="mobile" />
+
             <LeadNews2 data={data.leadNews} video={[]} bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} specialVideo={data.special_video} homeVideoSlide={data.home_videoSlide} />
 
             {/* <LeadNews data={data.leadNews} video={[]} bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} specialVideo={data.special_video} homeVideoSlide={data.home_videoSlide} /> */}
