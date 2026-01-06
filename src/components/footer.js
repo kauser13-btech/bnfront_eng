@@ -12,7 +12,7 @@ const Footer = () => {
                                 <span className="me-1 float-start">Follow Us |</span>
                                 <a className="me-2 float-start" href="https://www.youtube.com/channel/UCzfkD4dNxVlIhUW3xaM4uxw"><i className="bi bi-youtube"></i></a>
                                 <a className="me-2 float-start" href="https://x.com/banglanews24com"><i className="bi bi-twitter"></i></a>
-                                <a className="me-2 float-start" href="https://www.facebook.com/banglanews24"><i className="bi bi-facebook"></i></a>
+                                <a className="me-2 float-start" href="https://www.facebook.com/BanglanewsEnglish"><i className="bi bi-facebook"></i></a>
                                 <a className="me-2 float-start" href="https://www.instagram.com/banglanews24"><i className="bi bi-instagram"></i></a>
                             </div>
 

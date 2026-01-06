@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
             "closes": "23:59"
         },
         "sameAs": [
-            "https://www.facebook.com/banglanews24",
+            "https://www.facebook.com/BanglanewsEnglish",
             "https://twitter.com/banglanews24com",
             "https://www.youtube.com/channel/UCuF6rsucG-LUjL76Rvjlh0A",
             "https://play.google.com/store/apps/details?id=com.ewmgl.banglanews&hl=en_US",

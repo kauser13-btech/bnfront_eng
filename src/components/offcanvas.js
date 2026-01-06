@@ -23,7 +23,7 @@ const Offcanvas = ({ data }) => {
             <div className="offcanvas-header border-bottom pt-0 pb-2 d-flex justify-content-center d-block d-xl-none">
                 <ul className="list-group list-group-horizontal mb-2 float-end mt-4">
                     <li className="list-group-item">
-                        <a className="text-dark fs-6" href="https://www.facebook.com/banglanews24"><i className="bi bi-facebook"></i></a>
+                        <a className="text-dark fs-6" href="https://www.facebook.com/BanglanewsEnglish"><i className="bi bi-facebook"></i></a>
                     </li>
                     <li className="list-group-item">
                         <a className="text-dark fs-6" href="https://www.youtube.com/channel/UCzfkD4dNxVlIhUW3xaM4uxw"><i className="bi bi-youtube"></i></a>

@@ -37,7 +37,7 @@ const Header = async () => {
                     <div className="p-0 pe-0">
                         <ul className="list-group list-group-horizontal mb-2 float-end mt-2">
                             <li className="list-group-item">
-                                <a className="text-dark fs-6" href="https://www.facebook.com/banglanews24"><i className="bi bi-facebook"></i></a>
+                                <a className="text-dark fs-6" href="https://www.facebook.com/BanglanewsEnglish"><i className="bi bi-facebook"></i></a>
                             </li>
                             <li className="list-group-item">
                                 <a className="text-dark fs-6" href="https://www.youtube.com/channel/UCzfkD4dNxVlIhUW3xaM4uxw"><i className="bi bi-youtube"></i></a>
