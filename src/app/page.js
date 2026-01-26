@@ -111,10 +111,10 @@ export default async function Home() {
             <div className="mt-3">
                 <DesktopAd adData={data.banner_desktop} position="desktop-home-section-1" catId="home" w="970" h="90" />
 
-                <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/970x90.html" height="90" width="970" device="desktop" />
+                {/* <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/970x90.html" height="90" width="970" device="desktop" /> */}
             </div>
 
-            <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/320x100.html" height="100" width="320" device="mobile" />
+            {/* <IframeBanner src="https://reachableads-av.s3.ap-southeast-1.amazonaws.com/creatives/aygaze/3/320x100.html" height="100" width="320" device="mobile" /> */}
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-1" catId="home" w="320" h="100" />
 
