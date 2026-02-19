@@ -75,6 +75,18 @@ const Header = async () => {
                                         <i className="bi bi-facebook fs-6"></i>
                                         <span>Health</span>
                                     </a>
+                                    <a target="_blank" href="https://www.facebook.com/banglanewseconomics" className="text-decoration-none text-dark d-flex align-items-center gap-2">
+                                        <i className="bi bi-facebook fs-6"></i>
+                                        <span>Economics</span>
+                                    </a>
+                                    <a target="_blank" href="https://www.facebook.com/banglanewsspecial" className="text-decoration-none text-dark d-flex align-items-center gap-2">
+                                        <i className="bi bi-facebook fs-6"></i>
+                                        <span>Special</span>
+                                    </a>
+                                    <a target="_blank" href="https://www.facebook.com/banglanewsislam" className="text-decoration-none text-dark d-flex align-items-center gap-2">
+                                        <i className="bi bi-facebook fs-6"></i>
+                                        <span>Islam</span>
+                                    </a>
                                 </div>
 
                                 <strong>YouTube channel</strong>
