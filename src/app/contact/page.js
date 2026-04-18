@@ -21,10 +21,10 @@ const Page = () => {
                     ABG Tower, Plot - 440, 441 & 442, Road - 18, Bashundhara R/A, Dhaka - 1229, Bangladesh.<br />
                 </address>
                 <strong>News Room Phone :</strong> 880-9612123131, 88-01729076996, 01729076999 <br />
-                <strong>Phone :</strong> 88 02 8432181, 8432182 <br />
-                <strong>Fax :</strong> 88 02 8432346 <br />
+                {/* <strong>Phone :</strong> 88 02 8432181, 8432182 <br />
+                <strong>Fax :</strong> 88 02 8432346 <br /> */}
                 <strong>Email :</strong> <Link href="mailto:news@banglanews24.com">news@banglanews24.com</Link> <br /><br />
-                <strong>Marketing Department :</strong> +88 01717635067, 01722241066, 01727454405 <br />
+                <strong>Marketing Department :</strong> 880-9612123131 <br />
                 <strong>Email :</strong> <Link href="mailto:marketing@banglanews24.com">marketing@banglanews24.com</Link> <br /><br />
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.1411978642413!2d90.43179201429822!3d23.813577592278317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c635ab331b1b%3A0x9c702e045318af5f!2sbanglanews24.com!5e0!3m2!1sen!2sbd!4v1582199656314!5m2!1sen!2sbd" width="1060" height="450" allowFullScreen=""></iframe>
             </div>

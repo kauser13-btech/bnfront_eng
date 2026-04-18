@@ -20,7 +20,7 @@ const Footer = () => {
                         <div className="col-12 col-xl-4">
                             <div className="text-center">
                                 <span>news@banglanews24.com</span><br />
-                                <span>+880 2 843 2181 | +880 2 843 2182</span>
+                                {/* <span>+880 2 843 2181 | +880 2 843 2182</span> */}
                             </div>
                         </div>
                         <div className="col-12 col-xl-4">
