@@ -30,8 +30,6 @@ export const metadata = {
 const Topic = async ({ params }) => {
     const data = await getData();
 
-    console.log('data',data)
-
     return (
         <section className="categoryLead section archiveNews">
             <div className="container">
