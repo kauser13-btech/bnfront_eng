@@ -3,6 +3,7 @@ import LazySection from "@/components/lazySection";
 import Section1 from '@/components/section1';
 import Section2 from '@/components/section2';
 import Section4 from '@/components/section4';
+import Photogallery from '@/components/photogallery';
 import Section6 from '@/components/section6';
 import Section7 from '@/components/section7';
 import Section8 from '@/components/section8';
@@ -124,7 +125,8 @@ export default async function Home() {
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-5" catId="home" w="320" h="250" />
 
-            <Section1 title="Highlights" data={data.highlight} />
+            {/* <Section1 title="Highlights" data={data.highlight} /> */}
+            <Section1 title="Banglanews Special" hrf="/category/banglanews-special" data={data.homeCat_12} />
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-5" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-6" catId="home" w="320" h="250" />
@@ -189,7 +191,7 @@ export default async function Home() {
                             <Section4 title="Education" data={data.homeCat_8} hrf="/category/education" />
                         </div>
                         <div className='col-12 col-xl-4 borde-endr-xl border-end-xxl'>
-                            <Section4 title="Special" data={data.homeCat_12} hrf="/category/banglanews-special" />
+                            <Section4 title="Health" data={data.homeCat_9} hrf="/category/health" />
                         </div>
                         <div className='col-12 col-xl-4'>
                             <Section4 title="Open forum" data={data.homeCat_15} hrf="/category/open-forum" />

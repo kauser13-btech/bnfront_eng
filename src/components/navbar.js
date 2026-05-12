@@ -43,6 +43,10 @@ const Navbar = async () => {
                             <a className="nav-link fs-5 py-0" aria-current="page" href={`/`}><i className="bi bi-house"></i></a>
                         </li>
 
+                        <li className="nav-item">
+                            <CustomLink prefetch={false} className="nav-link fs-5 py-0" aria-current="page" href={`/todayall`}>Latest</CustomLink>
+                        </li>
+
                         {data.nav.slice(0, 8).map((nav, i) => {
                             if (nav.child.length > 0) {
                                 let isDropdown = (nav.slug == '#') ? 'dropdown' : 'dropdown';
@@ -76,10 +80,10 @@ const Navbar = async () => {
                     <span className="navbar-text p-0">
                         <ul className="list-group list-group-horizontal">
                             <li className="list-group-item rounded-0 pb-0 pt-2 border-top-0 border-bottom-0">
-                                <CustomLink prefetch={false} className="fs-6" href={`/video`}>Video</CustomLink>
+                                <CustomLink prefetch={false} className="fs-6" href={`https://www.banglanews24.com/video`}>Video</CustomLink>
                             </li>
                             <li className="list-group-item rounded-0 pb-0 pt-2 border-start-0 border-top-0 border-bottom-0">
-                                <CustomLink prefetch={false} className="fs-6" href={`https://www.banglanews24.com/`}>বাংলা</CustomLink>
+                                <CustomLink prefetch={false} className="fs-6 text-primary" href={`https://www.banglanews24.com/`}>বাংলা</CustomLink>
                             </li>
                             <li className="list-group-item rounded-0 py-0 border-top-0 border-bottom-0">
                                 <SearchBTN />
