@@ -30,6 +30,8 @@ export const metadata = {
 const Topic = async ({ params }) => {
     const data = await getData();
 
+    console.log('data',data)
+
     return (
         <section className="categoryLead section archiveNews">
             <div className="container">
@@ -72,7 +74,7 @@ const Topic = async ({ params }) => {
                                     <ViewImg image={row.main_image} cls="card-img-top h-auto mb-2 w-100" alt={row.n_head} />
                                     <div className="card-body px-3 pt-0">
                                         <h4 className="card-title lh-sm">{row.n_head}</h4>
-                                        <p className="card-text lh-base homeSubDesc">{row.n_details}</p>
+                                        {/* <p className="card-text lh-base homeSubDesc">{row.n_details}</p> */}
                                     </div>
                                     <CustomLink prefetch={false} className="stretched-link" href={`/${row.cat_name.slug}/news/bd/${row.n_id}.details`}></CustomLink>
                                 </div>
