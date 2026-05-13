@@ -3,6 +3,7 @@ import LazySection from "@/components/lazySection";
 import Section1 from '@/components/section1';
 import Section2 from '@/components/section2';
 import Section4 from '@/components/section4';
+import Photogallery from '@/components/photogallery';
 import Section6 from '@/components/section6';
 import Section7 from '@/components/section7';
 import Section8 from '@/components/section8';
@@ -197,6 +198,10 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
+            </LazySection>
+
+            <LazySection fallback={<CardSkeleton />}>
+                <Photogallery />
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>

@@ -55,14 +55,25 @@
             color: #007bff !important;
         }
 
-        :global(.slick-prev:before, .slick-next:before) {
+        :global(.slick-prev:before),
+        :global(.slick-next:before) {
             color: #fff !important;
             font-size: 30px !important;
         }
 
-        :global(.slick-prev, .slick-next) {
-            width: 150px;
-            height: 150px;
+        :global(.slick-prev),
+        :global(.slick-next) {
+            width: 2rem;
+            height: 2rem;
+            z-index: 20;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+
+        :global(.slick-next:before) {
+            width: 2rem;
+            height: 2rem;
             z-index: 20;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
