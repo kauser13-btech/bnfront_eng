@@ -80,7 +80,7 @@ const Navbar = async () => {
                     <span className="navbar-text p-0">
                         <ul className="list-group list-group-horizontal">
                             <li className="list-group-item rounded-0 pb-0 pt-2 border-top-0 border-bottom-0">
-                                <CustomLink prefetch={false} className="fs-6" href={`https://www.banglanews24.com/video`}>Video</CustomLink>
+                                <CustomLink prefetch={false} className="fs-6" href={`https://www.banglanews24.com/multimedia`}>Video</CustomLink>
                             </li>
                             <li className="list-group-item rounded-0 pb-0 pt-2 border-start-0 border-top-0 border-bottom-0">
                                 <CustomLink prefetch={false} className="fs-6 text-primary" href={`https://www.banglanews24.com/`}>বাংলা</CustomLink>
