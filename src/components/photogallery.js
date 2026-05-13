@@ -176,7 +176,7 @@ const Photogallery = () => {
 
             <div className="mt-4">
                 <h3 className="border-bottom pb-2 mb-2 mx-5">
-                    Photo Gallery
+                    Photo Gallery 
                     <CustomLink prefetch={false} className="float-end fs-6 mt-3" href={`/photo`}>
                         More <i className="bi bi-chevron-right"></i>
                     </CustomLink>
