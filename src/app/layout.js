@@ -149,7 +149,7 @@ export default function RootLayout({ children }) {
                         `,
                     }}
                 />
-                <Script id="feedify-webscript" strategy="lazyOnload"
+                {/* <Script id="feedify-webscript" strategy="lazyOnload"
                     dangerouslySetInnerHTML={{
                         __html: `
                             var feedify = feedify || {};
@@ -165,7 +165,7 @@ export default function RootLayout({ children }) {
                             })(window, document);
                         `,
                     }}
-                />
+                /> */}
 
                 <Script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" strategy="afterInteractive" />
                 <Script id="gpt-init" strategy="afterInteractive"
