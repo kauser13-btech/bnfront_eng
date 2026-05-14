@@ -284,6 +284,7 @@ const PhotoGallery = ({ gallery }) => {
                                     onClick={(e) => handleImageClick(e, index)}
                                 >
                                     <ViewImg image={`${gallery.imagesUrl}/${image.image}`} cls="h-100 w-100 img-fluid" alt={image.text} />
+                                    <h5 className='mt-4 px-2 text-limit-2 lh-base'>{image.text}</h5>
                                 </a>
                             </div>
                         ))}
