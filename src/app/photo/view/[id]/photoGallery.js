@@ -20,11 +20,11 @@ const PhotoGallery = ({ gallery }) => {
 
         for (let i = 0; i < images.length; i++) {
             markup += `
-        <button type="button" data-bs-target="#lightboxCarousel"
-          data-bs-slide-to="${i}"
-          ${i === currentIndex ? 'class="active" aria-current="true"' : ''}
-          aria-label="Slide ${i + 1}">
-        </button>`;
+            <button type="button" data-bs-target="#lightboxCarousel"
+              data-bs-slide-to="${i}"
+              ${i === currentIndex ? 'class="active" aria-current="true"' : ''}
+              aria-label="Slide ${i + 1}">
+            </button>`;
         }
 
         return markup;
@@ -37,7 +37,7 @@ const PhotoGallery = ({ gallery }) => {
             markup += `
         <div class="carousel-item${index === currentIndex ? " active" : ""}">
           <img class="d-block img-fluid w-100" src="${gallery.imagesUrl}/${image.image}" alt="${image.text}">
-          ${image.alt ? createCaption(image.alt) : ""}
+          ${image.text ? createCaption(image.text) : ""}
         </div>`;
         });
 
@@ -279,7 +279,7 @@ const PhotoGallery = ({ gallery }) => {
                         {images.map((image, index) => (
                             <div key={index} className="col">
                                 <a
-                                    className="gallery-item"
+                                    className="gallery-item border"
                                     href={`${gallery.imagesUrl}/${image.image}`}
                                     onClick={(e) => handleImageClick(e, index)}
                                 >
