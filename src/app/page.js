@@ -125,9 +125,7 @@ export default async function Home() {
             {/* <LeadNews data={data.leadNews} video={[]} bannerDesktop={data.banner_desktop} bannerMobile={data.banner_mobile} specialVideo={data.special_video} homeVideoSlide={data.home_videoSlide} /> */}
 
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-5" catId="home" w="320" h="250" />
-            
-            <DesktopAd adData={data.banner_desktop} position="desktop-home-section-2" catId="home" w="970" h="90" />
-            
+                        
             {/* <Section1 title="Highlights" data={data.highlight} /> */}
             <Section1 title="Banglanews Special" hrf="/category/banglanews-special" data={data.homeCat_12} />
 
