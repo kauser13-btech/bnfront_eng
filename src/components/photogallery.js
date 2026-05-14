@@ -49,7 +49,7 @@ const Photogallery = () => {
         axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/gallery/homephotos`, {
             headers: { 'Content-Type': 'application/json' }
         }).then((response) => {
-            setPosts(response.data);
+            setPosts(response.data.data);
         }).catch(function (res) {
             console.log('error', res)
         });

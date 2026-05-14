@@ -17,6 +17,7 @@ import BottomStickyAd from '@/ads/bottomStickyAd';
 import MobileBottomStickyAd from '@/ads/mobileBottomStickyAd';
 import LeadNews2 from '@/components/leadNews2';
 import IframeBanner from '@/ads/iframeBanner';
+import Photogallery from '@/components/photogallery';
 
 export const revalidate = 60;
 
@@ -201,7 +202,7 @@ export default async function Home() {
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
-                {/* <Photogallery /> */}
+                <Photogallery />
             
                 <Section7 />
             </LazySection>
