@@ -192,10 +192,12 @@ const ArticleComponent = ({ newsData, desktopAdData, mobileAdData, mID }) => {
             {newsData.meta_keyword &&
                 <div className="mt-4">
                     <p className="d-inline-flex gap-1">
-                        <a className="btn border-0 disabled" aria-disabled="true" role="button" data-bs-toggle="button">Topic:</a>
-                        {newsData.meta_keyword.split(",").map((row, i) =>
-                            <CustomLink key={i} href={`/topic/${row}`} className="btn">{row}</CustomLink>
-                        )}
+                        <span className="btn border-0 disabled" aria-disabled="true" role="button" data-bs-toggle="button">Topic:</span>
+                        <span>
+                            {newsData.meta_keyword.split(",").map((row, i) =>
+                                <CustomLink key={i} href={`/topic/${row}`} className="btn">{row}</CustomLink>
+                            )}
+                        </span>
                     </p>
                 </div>
             }
