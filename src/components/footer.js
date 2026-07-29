@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row mob_left_none">
                         <div className="col-12 col-lg-7">
-                            <strong>Editor: Tawhidul Islam Mintu</strong>
+                            <strong>Editor: A. K. M. Manjurul Haque</strong>
                             <br />
                             Publisher: Maynal Hossain Chowdhury
                         </div>
