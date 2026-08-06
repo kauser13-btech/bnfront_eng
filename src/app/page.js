@@ -127,7 +127,7 @@ export default async function Home() {
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-5" catId="home" w="320" h="250" />
                         
             {/* <Section1 title="Highlights" data={data.highlight} /> */}
-            <Section1 title="Banglanews Special" hrf="/category/banglanews-special" data={data.homeCat_12} />
+            {/* <Section1 title="Banglanews Special" hrf="/category/banglanews-special" data={data.homeCat_12} /> */}
 
             <DesktopAd adData={data.banner_desktop} position="desktop-home-section-5" catId="home" w="970" h="90" />
             <MobileAd adData={data.banner_mobile} position="mobile-home-section-6" catId="home" w="320" h="250" />
@@ -162,7 +162,7 @@ export default async function Home() {
             </LazySection>
 
             <LazySection fallback={<CardSkeleton />}>
-                <Section1 title="Health" data={data.homeCat_9} hrf="/category/health" />
+                {/* <Section1 title="Health" data={data.homeCat_9} hrf="/category/health" /> */}
 
                 <MobileAd adData={data.banner_mobile} position="mobile-home-section-12" catId="home" w="320" h="250" />
 

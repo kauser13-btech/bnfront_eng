@@ -40,13 +40,13 @@ const Section1 = ({ title, data, hrf = '' }) => {
                             </div>
                         </div>
                     )}
-                    {data.slice(4, 8).map((row, i) =>
+                    {/* {data.slice(4, 8).map((row, i) =>
                         <div key={i} className="col-12 col-lg-3">
                             <div className="mb-4 border-bottom border-bottom-xl-0 border-bottom-xxl-0">
                                 <CustomLink prefetch={false} className={`fs-5 ${styles.titleHead}`} href={`${row.cat_name.slug}/news/bd/${row.n_id}.details`}>{row.n_head}</CustomLink>
                             </div>
                         </div>
-                    )}
+                    )} */}
                 </div>
             </div>
         </section>
