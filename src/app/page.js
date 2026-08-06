@@ -195,7 +195,8 @@ export default async function Home() {
                             <Section4 title="Health" data={data.homeCat_9} hrf="/category/health" />
                         </div>
                         <div className='col-12 col-xl-4'>
-                            <Section4 title="Open forum" data={data.homeCat_15} hrf="/category/open-forum" />
+                            {/* <Section4 title="Open forum" data={data.homeCat_15} hrf="/category/open-forum" /> */}
+                            <Section4 title="Banglanews Special" hrf="/category/banglanews-special" data={data.homeCat_12} />
                         </div>
                     </div>
                 </div>
