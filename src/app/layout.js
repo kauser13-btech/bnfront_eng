@@ -47,7 +47,9 @@ export const metadata = {
     },
     other: {
         'identifier-URL': 'https://en.banglanews24.com',
-        'fb:pages': '',
+    },
+    facebook: {
+        appId: '826224996881445',
     },
     twitter: {
         card: 'summary_large_image',
@@ -115,6 +117,9 @@ export default function RootLayout({ children }) {
 
     return (
         <html lang="bn">
+            <head>
+                <meta property="fb:pages" content="349770751712144" />
+            </head>
             <body suppressHydrationWarning={true} className={notoSarifBengali.className}>
 
                 <BodyTopAd />

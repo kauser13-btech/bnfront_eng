@@ -38,20 +38,24 @@ export async function generateMetadata({ params, searchParams }) {
     const data = await getCategoryData(n_id);
 
     const getUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${data.details.cat_name.slug}/news/bd/${articleId}`;
-
+    
     return {
         title: data.details.n_head,
         description: data.details.meta_description,
-        keywords: data.details.meta_keyword,
         alternates: {
             canonical: getUrl,
         },
+        type: "article",
         openGraph: {
             title: data.details.n_head,
             description: data.details.meta_description,
             url: getUrl,
-            siteName: 'banglanews24.com',
+            siteName: 'Banglanews24',
+            type: 'article',
             publishedTime: data.details.datePublished,
+            tags: data.details.cat_name.m_name,
+            section: data.details.cat_name.m_name,
+            locale: 'bn_BD',
             images: [
                 {
                     url: data.details.openGraphImg,
@@ -60,7 +64,15 @@ export async function generateMetadata({ params, searchParams }) {
                 }
             ],
         },
+        twitter: {
+            card: "summary_large_image",
+            title: data.details.n_head,
+            description: data.details.meta_description,
+            images: [data.details.openGraphImg],
+        },
     };
+    
+    
 }
 
 const DetailsPage = async ({ params }) => {
