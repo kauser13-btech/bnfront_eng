@@ -58,8 +58,8 @@ export async function generateMetadata({ params, searchParams }) {
             images: [
                 {
                     url: data.details.openGraphImg,
-                    width: 800,
-                    height: 600,
+                    width: 725,
+                    height: 400,
                 }
             ],
         },
