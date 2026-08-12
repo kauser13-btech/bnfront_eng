@@ -38,14 +38,13 @@ export async function generateMetadata({ params, searchParams }) {
     const data = await getCategoryData(n_id);
 
     const getUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${data.details.cat_name.slug}/news/bd/${articleId}`;
-    
+
     return {
         title: data.details.n_head,
         description: data.details.meta_description,
         alternates: {
             canonical: getUrl,
         },
-        type: "article",
         openGraph: {
             title: data.details.n_head,
             description: data.details.meta_description,
@@ -70,9 +69,12 @@ export async function generateMetadata({ params, searchParams }) {
             description: data.details.meta_description,
             images: [data.details.openGraphImg],
         },
+        other: {
+            'fb:app_id': '826224996881445',
+        },
     };
-    
-    
+
+
 }
 
 const DetailsPage = async ({ params }) => {
