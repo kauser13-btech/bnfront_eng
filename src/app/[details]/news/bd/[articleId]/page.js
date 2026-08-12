@@ -52,7 +52,6 @@ export async function generateMetadata({ params, searchParams }) {
             siteName: 'Banglanews24',
             type: 'article',
             publishedTime: data.details.datePublished,
-            tags: data.details.cat_name.m_name,
             section: data.details.cat_name.m_name,
             locale: 'bn_BD',
             images: [
