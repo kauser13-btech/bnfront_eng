@@ -70,7 +70,8 @@ export async function generateMetadata({ params, searchParams }) {
             images: [data.details.openGraphImg],
         },
         other: {
-            'fb:app_id': '826224996881445',
+            'property': 'fb:app_id',
+            'content': '826224996881445',
         },
     };
 
