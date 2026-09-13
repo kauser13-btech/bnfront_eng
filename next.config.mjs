@@ -22,7 +22,7 @@ const nextConfig = {
 		],
 	},
 	generateBuildId: async () => {
-        return 'enbuild-id-0.1.31';
+        return 'enbuild-id-0.1.32';
 	},
 	async rewrites() {
 		return [
