@@ -16,7 +16,7 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
                     <div className="row">
                         <div className="col-12 col-lg-4 order-2 order-xl-1">
                             {leadMore.slice(6, 11).map((row, i) =>
-                                <div key={i} className="row position-relative mb-2">
+                                <div key={i} className="row position-relative mb-3">
                                     <div className="col-4 pe-0 position-relative">
                                         <h3><ViewImg image={row.main_image} cls="h-100 w-100" alt={row.n_head} /></h3>
 
@@ -33,7 +33,7 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
                                     </div>
                                     <CustomLink className="stretched-link" href={`${row.cat_name.slug}/news/bd/${row.n_id}.details`}></CustomLink>
 
-                                    <p className="text-secondary homeSubDesc text-limit-2" dangerouslySetInnerHTML={{ __html: row.n_details }} />
+                                    <p className="text-secondary homeSubDesc text-limit-3" dangerouslySetInnerHTML={{ __html: row.n_details }} />
 
                                     {i < 4 &&
                                         <div className="col-12"><div className="border-bottom"></div></div>
@@ -76,7 +76,8 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
                                 {leadMore.slice(0, 3).map((row, i) =>
                                     <div key={i} className={`col-12 col-xl-4 mb-2 pb-2 mb-lg-0 border-bottom ${i == 1 && 'px-xl-0'}`}>
                                         <div className={`position-relative ${styles.leadMoreUnderline} ${i == 1 && 'pe-xl-2'} ${i < 2 && 'border-end-xl border-end-xxl'}`}>
-                                            <p className="text-limit-2 fs-5 fw-bolder">{row.n_head}</p>
+                                            <ViewImg image={row.main_image} cls="card-img-top w-100 h-auto border-top-0 border-start-0 border-end-0" alt={row.n_head} />
+                                            <p className="text-limit-2 mt-3 fs-5 fw-bolder">{row.n_head}</p>
                                             <span className="text-secondary mt-3 text-limit-3 homeSubDesc" dangerouslySetInnerHTML={{ __html: row.n_details }} />
 
                                             <CustomLink className="stretched-link" href={`${row.cat_name.slug}/news/bd/${row.n_id}.details`}></CustomLink>
@@ -103,7 +104,7 @@ const LeadNews2 = ({ data, bannerDesktop, bannerMobile, specialVideo, homeVideoS
                                                 </div>
                                                 <div className="col-8 col-lg-12">
                                                     <div className="mt-2">
-                                                        <h5 className={`lh-base ${styles.n_head} fw-bolder`}>{row.n_head}</h5>
+                                                        <h5 className={`lh-base ${styles.n_head} fw-bolder text-limit-2`}>{row.n_head}</h5>
                                                     </div>
                                                 </div>
                                             </div>
